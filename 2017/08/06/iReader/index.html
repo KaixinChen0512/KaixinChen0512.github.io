@@ -101,12 +101,12 @@
 <meta property="og:site_name" content="一天一颗蛋的开心">
 <meta property="og:description" content="title: 一个手机阅读器的WebAppdate: 2017-08-06 20:35:44tags:   WebApp iReader   提问：拿着手机我们都该干点啥正经事儿？    按照惯例，咱也还是先上效果图。有句名言说得好：没图说个脚本:)还有一句名言叫做：talk is to easy, show me the code!So 接下来咱们就开始看看这个小东西里面都有哪些重难点。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2017/08/06/images/iReader/iReader.gif">
-<meta property="og:updated_time" content="2017-08-06T13:39:34.990Z">
+<meta property="og:image" content="http://yoursite.com/2017/08/06/images/iReader/iReader.jpg">
+<meta property="og:updated_time" content="2017-08-06T13:43:08.806Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一天一颗蛋的开心">
 <meta name="twitter:description" content="title: 一个手机阅读器的WebAppdate: 2017-08-06 20:35:44tags:   WebApp iReader   提问：拿着手机我们都该干点啥正经事儿？    按照惯例，咱也还是先上效果图。有句名言说得好：没图说个脚本:)还有一句名言叫做：talk is to easy, show me the code!So 接下来咱们就开始看看这个小东西里面都有哪些重难点。">
-<meta name="twitter:image" content="http://yoursite.com/2017/08/06/images/iReader/iReader.gif">
+<meta name="twitter:image" content="http://yoursite.com/2017/08/06/images/iReader/iReader.jpg">
 
 
 
@@ -347,7 +347,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T21:39:34+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T21:43:08+08:00">
                 2017-08-06
               </time>
             
@@ -405,7 +405,7 @@
 <hr>
 <blockquote class="blockquote-center"><p>提问：拿着手机我们都该干点啥正经事儿？</p>
 </blockquote>  
-<p>按照惯例，咱也还是先上效果图。<br>有句名言说得好：没图说个<strong>脚本</strong>:)<br><img src="../images/iReader/iReader.gif" alt="iReader效果展示"><br>还有一句名言叫做：talk is to easy, show me the code!<br>So 接下来咱们就开始看看这个小东西里面都有哪些重难点。<br><a id="more"></a></p>
+<p>按照惯例，咱也还是先上效果图。<br>有句名言说得好：没图说个<strong>脚本</strong>:)<br><img src="../images/iReader/iReader.jpg" alt="iReader效果展示"><br>还有一句名言叫做：talk is to easy, show me the code!<br>So 接下来咱们就开始看看这个小东西里面都有哪些重难点。<br><a id="more"></a></p>
 <h3 id="HTML页面部分"><a href="#HTML页面部分" class="headerlink" title="HTML页面部分"></a>HTML页面部分</h3><p>这部分还比较常规，没有特别需要注意或者说新颖的地方，有几个小tips看一下就好了。  </p>
 <ul>
 <li><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&quot;&gt;</code><br>因为作品是针对手机端的一个WebApp，所以为了让这个WebApp看起来更像是一个Native App，我们需要在页面部分的meta处声明以上代码，作用分别是：设备宽度等于视口宽度即使布局视口等于可视视口，这样布局视口就成为了理想视口；最小缩放1倍；最大缩放1倍；禁止用户缩放；  <h3 id="JS部分"><a href="#JS部分" class="headerlink" title="JS部分"></a>JS部分</h3>一、第三方库的选择和使用<br>需要用到的第三方库有jQuery.base64.js、jQuery.jsonp.js，分别用来进行base64格式图片的获取以及jsonp的使用，此外在这里我是用了Zepto.js而不是jQuery作为前两个库的支持，这是因为在移动端的性能表现上，Zepto比jQuery稍微优秀一些，也正因如此在js文件引用时需要做那么一些小改动。  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"lib/zepto.min.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">	<span class="built_in">window</span>.jQuery = $;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div><div class="line"><span class="regexp">&lt;script type="text/</span>javascript<span class="string">" src="</span>js/jquery.base64.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;script type="</span>text/javascript<span class="string">" src="</span>js/jquery.jsonp.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;script type="</span>text/javascript<span class="string">" src="</span>js/index.js<span class="string">"&gt;&lt;/script&gt;</span></div></pre></td></tr></table></figure>
