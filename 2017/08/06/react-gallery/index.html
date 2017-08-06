@@ -94,16 +94,19 @@
 
 
 
-<meta name="description" content="加油！熬过了这段时间就可以...熬下一段时间了！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="一天一颗蛋的开心">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="这个小项目用到的主要技术是React以及webpack，历时差不多断断续续三天时间吧，初衷是为了入门react以及对webpack的工作原理有个更深刻的认识，当然其中也遇到了不少难题，现做记录，话不多说了，上效果图。 初识React首先通过React的createClass方法来创建一个React的组件，注意，这里创建的并不是真实的DOM节点:123456var Hello = React.cre">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用React实现图片画廊（送女朋友必备）">
+<meta property="og:url" content="http://yoursite.com/2017/08/06/react-gallery/index.html">
 <meta property="og:site_name" content="一天一颗蛋的开心">
-<meta property="og:description" content="加油！熬过了这段时间就可以...熬下一段时间了！">
+<meta property="og:description" content="这个小项目用到的主要技术是React以及webpack，历时差不多断断续续三天时间吧，初衷是为了入门react以及对webpack的工作原理有个更深刻的认识，当然其中也遇到了不少难题，现做记录，话不多说了，上效果图。 初识React首先通过React的createClass方法来创建一个React的组件，注意，这里创建的并不是真实的DOM节点:123456var Hello = React.cre">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2017/08/06/images/gallery/gallery.jpg">
+<meta property="og:updated_time" content="2017-08-06T08:42:11.311Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一天一颗蛋的开心">
-<meta name="twitter:description" content="加油！熬过了这段时间就可以...熬下一段时间了！">
+<meta name="twitter:title" content="使用React实现图片画廊（送女朋友必备）">
+<meta name="twitter:description" content="这个小项目用到的主要技术是React以及webpack，历时差不多断断续续三天时间吧，初衷是为了入门react以及对webpack的工作原理有个更深刻的认识，当然其中也遇到了不少难题，现做记录，话不多说了，上效果图。 初识React首先通过React的createClass方法来创建一个React的组件，注意，这里创建的并不是真实的DOM节点:123456var Hello = React.cre">
+<meta name="twitter:image" content="http://yoursite.com/2017/08/06/images/gallery/gallery.jpg">
 
 
 
@@ -132,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/06/react-gallery/"/>
 
 
 
 
 
-  <title>一天一颗蛋的开心</title>
+  <title>使用React实现图片画廊（送女朋友必备） | 一天一颗蛋的开心</title>
   
 
 
@@ -163,9 +166,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -268,9 +269,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -300,9 +301,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/06/react-gallery/" itemprop="url">使用React实现图片画廊（送女朋友必备）</a></h1>
+          <h1 class="post-title" itemprop="name headline">使用React实现图片画廊（送女朋友必备）</h1>
         
 
         <div class="post-meta">
@@ -352,9 +351,7 @@
       
 
       
-        
-          
-            <p>这个小项目用到的主要技术是React以及webpack，历时差不多断断续续三天时间吧，初衷是为了入门react以及对webpack的工作原理有个更深刻的认识，当然其中也遇到了不少难题，现做记录，话不多说了，上效果图。<br><img src="../images/gallery/gallery.jpg" alt="画廊效果图"></p>
+        <p>这个小项目用到的主要技术是React以及webpack，历时差不多断断续续三天时间吧，初衷是为了入门react以及对webpack的工作原理有个更深刻的认识，当然其中也遇到了不少难题，现做记录，话不多说了，上效果图。<br><img src="../images/gallery/gallery.jpg" alt="画廊效果图"></p>
 <h3 id="初识React"><a href="#初识React" class="headerlink" title="初识React"></a>初识React</h3><p>首先通过React的createClass方法来创建一个React的组件，注意，这里创建的并不是真实的DOM节点:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var Hello = React.createClass(</div><div class="line">  // 添加function、state等</div><div class="line">  render: function() &#123;</div><div class="line">    return &lt;div&gt;Hello &#123;this.props.name&#125;&lt;/div&gt;</div><div class="line">  &#125;</div><div class="line">)</div></pre></td></tr></table></figure></p>
 <p>在ES6中可以通过class Hello extends React.Component{}，来实现创建React组件；<br>用render(){}来替代render:function(){}<br>然后通过调用React的render方法来创建一个组件的实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">ReactDOM.render(&lt;Hello name=&quot;React!&quot; /&gt;,</div><div class="line">document.getElementById(&apos;container&apos;)</div><div class="line">);</div><div class="line">```  </div><div class="line">其中render方法接受两个参数，第一个是React的组件，第二个是要插入的DOM节点 。  </div><div class="line">### React生命周期  </div><div class="line">有三个状态：</div><div class="line">+ Mounted：组件被render解析生成相对应的DOM节点并被插入浏览器的一个过程  </div><div class="line">+ Update： 一个Mounted的组件被重新render的过程（会将当前state和最近一次的state对比，只有发生改变了并且影响了DOM结构才会进行重新渲染）  </div><div class="line">+ Unmounted：将一个组件对应的DOM节点从DOM结构中移除的过程  </div><div class="line">每个状态都封装了hook函数（钩子函数）:  </div><div class="line">常用的钩子函数：  </div><div class="line">+ getInitialState()：初始化组件的最初的状态</div></pre></td></tr></table></figure></p>
 <p>getInitialState: function() {<br>    return {};<br>  }<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ES6中可以如下实现：</div></pre></td></tr></table></figure></p>
@@ -377,8 +374,6 @@ if(this.props.arrange.isCenter){
 </code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">+ 图片样式中的transform-style/perspective/transform-origin  </div><div class="line">transform-style属性是3D空间一个重要属性，指定嵌套元素如何在3D空间中呈现。他主要有两个属性值：flat和preserve-3d。  </div><div class="line">其中flat值为默认值，表示所有子元素在2D平面呈现。preserve-3d表示所有子元素在3D空间中呈现。  </div><div class="line">perspective属性对于3D变形来说至关重要。该属性会设置查看者的位置，并将可视内容映射到一个视锥上，继而投到一个2D视平面上。如果不指定透视，则Z轴空间中的所有点将平铺到同一个2D视平面中，并且变换结果中将不存在景深概念。  </div><div class="line">上面的描述可能让人难以理解一些，其实对于perspective属性，我们可以简单的理解为视距，用来设置用户和元素3D空间Z平面之间的距离。而其效应由他的值来决定，值越小，用户与3D空间Z平面距离越近，视觉效果更令人印象深刻；反之，值越大，用户与3D空间Z平面距离越远，视觉效果就很小。  </div><div class="line">`transform-origin: 0 50% 0; /*将旋转中心定为左线（默认值是中心点 50% 50% 0）*/`  </div><div class="line">+ 接上条，因为使用了transform-style:3d诱发了一个在Safari中的旋转bug  </div><div class="line">翻转了图片之后img-front被旋转了180盖在了img-back之上，正常情况下应该是img-back在上</div><div class="line">如下图：  </div><div class="line">![Safari旋转bug](../images/gallery/bug.jpg)  </div><div class="line">解决方法：  </div><div class="line">添加`transformZ(1px)`给他一个Z轴上的位移，让它盖住img-front。  </div><div class="line">+ 在Safari的Retina显示屏下，nav中的图表不清晰  </div><div class="line">亮色字体在深色的背景下渲染会显得粗糙，因为使用的亚像素渲染（使用RGB混合来呈现，较灰阶渲染效果更好，消耗内存也更多，手机上没有采用，mac上大量采用），因此要开启灰阶渲染（控制轮廓上像素点的亮度来达到字体原始形状）</div></pre></td></tr></table></figure>
 <p>-webkit-font-smoothing: antialiased;<br>-moz-font-smoothing: grayscale;<br>```<br>详细解释：<br>&emsp;&emsp;理想的字体其边缘的过渡是非常平滑的，但是在屏幕上显示的时候需要将字体栅格化为一个个像素点，采用黑白像素点渲染，无法体现字体的细节之处，会造成边缘呈现锯齿状的不平滑。<br>&emsp;&emsp;为了解决这个问题，字体渲染引擎采用了一些方法去进行平滑，其中就包括灰阶渲染和亚像素渲染<br>&emsp;&emsp;灰阶渲染是通过控制字体轮廓上像素点的亮度，达到字体原始形状的方法<br>&emsp;&emsp;亚像素渲染则利用了LCD屏幕中每个像素是由RGB三个亚像素的颜色和亮度混合而成一个完整像素的颜色这一原理，将字体上的轮廓点由三个亚像素体现达到原始形状的方法，与灰阶渲染相比，分辨率在垂直方向上放大了三倍，因此，渲染效果更好。但是，所消耗的内存也更多。<br>&emsp;&emsp;因此在手机屏幕上，为了减少CPU的开销，使用灰阶渲染。但是在macOS操作系统上，采用的是亚像素渲染这种方式。<br>这会导致白色、亮色的字体，在深色背景下会显得过粗，严重情况下看上去会模糊。 </p>
 
-          
-        
       
     </div>
     
@@ -395,139 +390,28 @@ if(this.props.arrange.isCenter){
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/Hello-World/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Kayson0512">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一天一颗蛋的开心">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/06/Hello-World/" itemprop="url">第一个脚印</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T13:33:46+08:00">
-                2017-08-06
-              </time>
+              <a href="/2017/08/06/Hello-World/" rel="next" title="第一个脚印">
+                <i class="fa fa-chevron-left"></i> 第一个脚印
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a><center>写在前面</center></h1><p>&emsp;&emsp;我是陈凯鑫，熟悉的朋友都爱叫我开心。<br>&emsp;&emsp;我是一个默默走在代码漫漫长路上的乐观积极的前端er。<br>&emsp;&emsp;没有太多的天赋，因为热爱，所以坚持。<br>&emsp;&emsp;渴望学习，同时也乐于分享。<br>&emsp;&emsp;非常欢迎大家访问<a href="https://github.com/KaixinChen0512" target="_blank" rel="external">我的GitHub</a>，里面有我的一些学习和自己创作的小作品  </p>
-<ul>
-<li><a href="https://github.com/KaixinChen0512/react-gallery" target="_blank" rel="external">一个基于react和webpack的画廊小作品</a>  </li>
-<li><a href="https://github.com/KaixinChen0512/iReader" target="_blank" rel="external">一个手机阅读器的WebApp</a>  </li>
-<li><a href="https://github.com/KaixinChen0512/responsive-web" target="_blank" rel="external">一个响应式的WebDemo</a>  </li>
-<li><a href="https://github.com/KaixinChen0512/Vue1.0-Eleme" target="_blank" rel="external">一个基于Vue1.0的外卖WebApp</a>  </li>
-</ul>
-<p>&emsp;&emsp;接下来最开始的几篇博客我就来写一写做这些小作品的时候遇到的坑和一些重难点吧</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -537,10 +421,11 @@ if(this.props.arrange.isCenter){
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -548,6 +433,10 @@ if(this.props.arrange.isCenter){
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -568,8 +457,17 @@ if(this.props.arrange.isCenter){
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -622,6 +520,22 @@ if(this.props.arrange.isCenter){
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#初识React"><span class="nav-number">1.</span> <span class="nav-text">初识React</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -742,10 +656,10 @@ if(this.props.arrange.isCenter){
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
