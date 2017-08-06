@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[使用React实现图片画廊（送女朋友必备）]]></title>
+    <url>%2F2017%2F08%2F06%2Freact-gallery%2F</url>
+    <content type="text"><![CDATA[提问：程序猿该如何找到女朋友？ 这个小项目用到的主要技术是React以及webpack，历时差不多断断续续三天时间吧，初衷是为了入门react以及对webpack的工作原理有个更深刻的认识，当然其中也遇到了不少难题，现做记录，话不多说了，上效果图。 初识React首先通过React的createClass方法来创建一个React的组件，注意，这里创建的并不是真实的DOM节点:jsx123456var Hello = React.createClass( // 添加function、state等 render: function() &#123; return &lt;div&gt;Hello &#123;this.props.name&#125;&lt;/div&gt; &#125;) 在ES6中可以通过class Hello extends React.Component{}，来实现创建React组件；用render(){}来替代render:function(){}然后通过调用React的render方法来创建一个组件的实例：jsx123ReactDOM.render(&lt;Hello name="React!" /&gt;,document.getElementById('container')); 其中render方法接受两个参数，第一个是React的组件，第二个是要插入的DOM节点 。 React生命周期有三个状态： Mounted：组件被render解析生成相对应的DOM节点并被插入浏览器的一个过程 Update： 一个Mounted的组件被重新render的过程（会将当前state和最近一次的state对比，只有发生改变了并且影响了DOM结构才会进行重新渲染） Unmounted：将一个组件对应的DOM节点从DOM结构中移除的过程每个状态都封装了hook函数（钩子函数）:常用的钩子函数： getInitialState()：初始化组件的最初的状态 jsx123getInitialState: function() &#123; return &#123;&#125;; &#125; ES6中可以如下实现：jsx123456class AppComponent extends React.Component &#123; constructor(props) &#123; super(props) this.state = &#123;&#125;; &#125;&#125; 注意：调用super的原因：在ES6中，在子类的constructor中必须先调用super才能引用thissuper(props)的目的：在constructor中可以使用this.props componentDidMount():组件被加载后进行的操作 ，否则会报错，创建组件实例时也同理，若需要创建多个，可以用一个标签包裹起来 创建组件时，组件的首字母必须大写，否则既不报错也不会正常显示 创建组件时，render函数内return的标签不是真实的DOM节点，那么要怎么在创建的时候取得标签并对其进行操作呢?答：可以在标签中添加ref属性，然后在方法中通过this.refs.REFNAME来取得该组件（方法中自动封装了event对象）： jsx123456789101112131415var MyComponent = React.createClass(&#123; handleClick: function(event) &#123; this.refs.myTextInput.focus(); event.stopPropagation(); event.preventDefault(); &#125;, render: function() &#123; return ( &lt;div&gt; &lt;input type="text" ref="myTextInput" /&gt; &lt;input type="button" value="Focus the text input" onClick=&#123;this.handleClick&#125; /&gt; &lt;/div&gt; ); &#125;&#125;); ————————项目开始————————脚手架工具yeomanyeoman能够自动构建好最佳的代码结构（基于Nodejs）安装：npm i -g yo选择相关的项目生成器：（本项目使用基于webpack来构建react）npm i -g generator-react-webpack查看已安装的generator生成器:1234linux npm ls -g –depth=1 2&gt;/dev/null | grep generator- windows npm ls -g –depth=1 2&gt;/dev/null | findstr generator- 2代表错误消息，/dev/null代表空设备文件，即将错误信息输出到空设备文件上，不显示出来我在windows 下，提示，系统找不到指定的路径。不指定 | findstr generator- ，出了全部的全局一级依赖。生成项目：yo react-webpack react-gallery webpack相关 .jshintrc不能解决jsx的相关问题，所以新版本都使用了.eslintrc（默认包含了.jshintrc） 新版本的webpack.config都模块化的存放在了./cfg目录下 解释：index.html中__REACT_DEVTOOLS_GLOBAL_HOOK__ = parent.__REACT_DEVTOOLS_GLOBAL_HOOK__因为使用React DevTool时，正常的React页面可以直接和ReactDevTools进行通信，但是在使用webpack的热更新时，webpack是将渲染出来的DOM结构以一个iframe进行呈现，所以需要将global环境下的hook赋值给iframe中的hook，才能保证正常通信。 新版本webpack中自动配置了json-loader无需另外配置 项目开始 图片旋转时，需要考虑浏览器的兼容性，这里必须使用较为特殊的驼峰式命名 jsx1234567//如果图片旋转角度有值，且不为0if(this.props.arrange.rotate)&#123; //对各种浏览器的兼容性，必须用驼峰式命名 ['MozTransform','msTransform','WebkitTransform','transform'].forEach(function(value)&#123; styleObj[value] = 'rotate('+this.props.arrange.rotate+'deg)'; &#125;.bind(this));&#125; 给居中的图片添加z-index，避免遮盖 123456//添加z-index 避免遮盖if(this.props.arrange.isCenter)&#123; styleObj.zIndex = 11;&#125; else &#123; styleObj.zIndex = 0;&#125; 图片样式中的transform-style/perspective/transform-origintransform-style属性是3D空间一个重要属性，指定嵌套元素如何在3D空间中呈现。他主要有两个属性值：flat和preserve-3d。其中flat值为默认值，表示所有子元素在2D平面呈现。preserve-3d表示所有子元素在3D空间中呈现。perspective属性对于3D变形来说至关重要。该属性会设置查看者的位置，并将可视内容映射到一个视锥上，继而投到一个2D视平面上。如果不指定透视，则Z轴空间中的所有点将平铺到同一个2D视平面中，并且变换结果中将不存在景深概念。上面的描述可能让人难以理解一些，其实对于perspective属性，我们可以简单的理解为视距，用来设置用户和元素3D空间Z平面之间的距离。而其效应由他的值来决定，值越小，用户与3D空间Z平面距离越近，视觉效果更令人印象深刻；反之，值越大，用户与3D空间Z平面距离越远，视觉效果就很小。transform-origin: 0 50% 0; /*将旋转中心定为左线（默认值是中心点 50% 50% 0）*/ 接上条，因为使用了transform-style:3d诱发了一个在Safari中的旋转bug翻转了图片之后img-front被旋转了180盖在了img-back之上，正常情况下应该是img-back在上如下图：解决方法：添加transformZ(1px)给他一个Z轴上的位移，让它盖住img-front。 在Safari的Retina显示屏下，nav中的图表不清晰亮色字体在深色的背景下渲染会显得粗糙，因为使用的亚像素渲染（使用RGB混合来呈现，较灰阶渲染效果更好，消耗内存也更多，手机上没有采用，mac上大量采用），因此要开启灰阶渲染（控制轮廓上像素点的亮度来达到字体原始形状） 12-webkit-font-smoothing: antialiased;-moz-font-smoothing: grayscale; 详细解释：&emsp;&emsp;理想的字体其边缘的过渡是非常平滑的，但是在屏幕上显示的时候需要将字体栅格化为一个个像素点，采用黑白像素点渲染，无法体现字体的细节之处，会造成边缘呈现锯齿状的不平滑。&emsp;&emsp;为了解决这个问题，字体渲染引擎采用了一些方法去进行平滑，其中就包括灰阶渲染和亚像素渲染&emsp;&emsp;灰阶渲染是通过控制字体轮廓上像素点的亮度，达到字体原始形状的方法&emsp;&emsp;亚像素渲染则利用了LCD屏幕中每个像素是由RGB三个亚像素的颜色和亮度混合而成一个完整像素的颜色这一原理，将字体上的轮廓点由三个亚像素体现达到原始形状的方法，与灰阶渲染相比，分辨率在垂直方向上放大了三倍，因此，渲染效果更好。但是，所消耗的内存也更多。&emsp;&emsp;因此在手机屏幕上，为了减少CPU的开销，使用灰阶渲染。但是在macOS操作系统上，采用的是亚像素渲染这种方式。这会导致白色、亮色的字体，在深色背景下会显得过粗，严重情况下看上去会模糊。]]></content>
+      <categories>
+        <category>作品</category>
+      </categories>
+      <tags>
+        <tag>react</tag>
+        <tag>webpack</tag>
+        <tag>gallery</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[第一个脚印]]></title>
+    <url>%2F2017%2F08%2F06%2FHello-World%2F</url>
+    <content type="text"><![CDATA[写在前面&emsp;&emsp;我是陈凯鑫，熟悉的朋友都爱叫我开心。&emsp;&emsp;我是一个默默走在代码漫漫长路上的乐观积极的前端er。&emsp;&emsp;没有太多的天赋，因为热爱，所以坚持。&emsp;&emsp;渴望学习，同时也乐于分享。&emsp;&emsp;非常欢迎大家访问我的GitHub，里面有我的一些学习和自己创作的小作品 一个基于react和webpack的画廊小作品 一个手机阅读器的WebApp 一个响应式的WebDemo 一个基于Vue1.0的外卖WebApp &emsp;&emsp;接下来最开始的几篇博客我就来写一写做这些小作品的时候遇到的坑和一些重难点吧]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>for fun</tag>
+      </tags>
+  </entry>
+</search>
