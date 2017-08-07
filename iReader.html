@@ -84,6 +84,8 @@
 
 
 
+  <link rel="alternate" href="/atom.xml" title="一天一颗蛋的开心" type="application/atom+xml" />
+
 
 
 
@@ -98,16 +100,16 @@
 <meta name="keywords" content="WebApp,iReader">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一个手机阅读器的WebApp">
-<meta property="og:url" content="http://yoursite.com/2017/08/06/iReader/index.html">
+<meta property="og:url" content="http://yoursite.com/iReader.html">
 <meta property="og:site_name" content="一天一颗蛋的开心">
 <meta property="og:description" content="提问：拿着手机我们都该干点啥正经事儿？    按照惯例，咱也还是先上效果图。有句名言说得好：没图说个脚本:)还有一句名言叫做：talk is to easy, show me the code!So 接下来咱们就开始看看这个小东西里面都有哪些重难点。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2017/08/06/images/iReader/iReader.jpg">
-<meta property="og:updated_time" content="2017-08-06T13:44:19.094Z">
+<meta property="og:image" content="http://yoursite.com/images/iReader/iReader.jpg">
+<meta property="og:updated_time" content="2017-08-06T13:47:51.031Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一个手机阅读器的WebApp">
 <meta name="twitter:description" content="提问：拿着手机我们都该干点啥正经事儿？    按照惯例，咱也还是先上效果图。有句名言说得好：没图说个脚本:)还有一句名言叫做：talk is to easy, show me the code!So 接下来咱们就开始看看这个小东西里面都有哪些重难点。">
-<meta name="twitter:image" content="http://yoursite.com/2017/08/06/images/iReader/iReader.jpg">
+<meta name="twitter:image" content="http://yoursite.com/images/iReader/iReader.jpg">
 
 
 
@@ -116,7 +118,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: true,
@@ -136,7 +138,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/08/06/iReader/"/>
+  <link rel="canonical" href="http://yoursite.com/iReader.html"/>
 
 
 
@@ -169,7 +171,7 @@
 
   <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
-
+    <a href="https://github.com/KaixinChen0512"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -252,6 +254,26 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-baidusitemap">
+          <a href="/baidusitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            menu.baidusitemap
+          </a>
+        </li>
+      
 
       
         <li class="menu-item menu-item-search">
@@ -319,7 +341,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/iReader/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/iReader.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kayson0512">
@@ -367,9 +389,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/08/06/iReader/#comments" itemprop="discussionUrl">
+                <a href="/iReader.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/08/06/iReader/" itemprop="commentCount"></span>
+                        data-disqus-identifier="iReader.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -402,9 +424,10 @@
 <p>按照惯例，咱也还是先上效果图。<br>有句名言说得好：没图说个<strong>脚本</strong>:)<br><img src="../images/iReader/iReader.jpg" alt="iReader效果展示"><br>还有一句名言叫做：talk is to easy, show me the code!<br>So 接下来咱们就开始看看这个小东西里面都有哪些重难点。<br><a id="more"></a></p>
 <h3 id="HTML页面部分"><a href="#HTML页面部分" class="headerlink" title="HTML页面部分"></a>HTML页面部分</h3><p>这部分还比较常规，没有特别需要注意或者说新颖的地方，有几个小tips看一下就好了。  </p>
 <ul>
-<li><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&quot;&gt;</code><br>因为作品是针对手机端的一个WebApp，所以为了让这个WebApp看起来更像是一个Native App，我们需要在页面部分的meta处声明以上代码，作用分别是：设备宽度等于视口宽度即使布局视口等于可视视口，这样布局视口就成为了理想视口；最小缩放1倍；最大缩放1倍；禁止用户缩放；  <h3 id="JS部分"><a href="#JS部分" class="headerlink" title="JS部分"></a>JS部分</h3>一、第三方库的选择和使用<br>需要用到的第三方库有jQuery.base64.js、jQuery.jsonp.js，分别用来进行base64格式图片的获取以及jsonp的使用，此外在这里我是用了Zepto.js而不是jQuery作为前两个库的支持，这是因为在移动端的性能表现上，Zepto比jQuery稍微优秀一些，也正因如此在js文件引用时需要做那么一些小改动。  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"lib/zepto.min.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">	<span class="built_in">window</span>.jQuery = $;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div><div class="line"><span class="regexp">&lt;script type="text/</span>javascript<span class="string">" src="</span>js/jquery.base64.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;script type="</span>text/javascript<span class="string">" src="</span>js/jquery.jsonp.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;script type="</span>text/javascript<span class="string">" src="</span>js/index.js<span class="string">"&gt;&lt;/script&gt;</span></div></pre></td></tr></table></figure>
+<li>因为作品是针对手机端的一个WebApp，所以为了让这个WebApp看起来更像是一个Native App，我们需要在页面部分的meta处声明以下代码，作用分别是：设备宽度等于视口宽度即使布局视口等于可视视口，这样布局视口就成为了理想视口；最小缩放1倍；最大缩放1倍；禁止用户缩放；  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"</span>&gt;</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
+<h3 id="JS部分"><a href="#JS部分" class="headerlink" title="JS部分"></a>JS部分</h3><p>一、第三方库的选择和使用<br>需要用到的第三方库有jQuery.base64.js、jQuery.jsonp.js，分别用来进行base64格式图片的获取以及jsonp的使用，此外在这里我是用了Zepto.js而不是jQuery作为前两个库的支持，这是因为在移动端的性能表现上，Zepto比jQuery稍微优秀一些，也正因如此在js文件引用时需要做那么一些小改动。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"lib/zepto.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">	<span class="built_in">window</span>.jQuery = $;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div><div class="line"><span class="regexp">&lt;script type="text/</span>javascript<span class="string">" src="</span>js/jquery.base64.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;script type="</span>text/javascript<span class="string">" src="</span>js/jquery.jsonp.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;script type="</span>text/javascript<span class="string">" src="</span>js/index.js<span class="string">"&gt;&lt;/script&gt;</span></div></pre></td></tr></table></figure></p>
 <p>一定要注意调用的顺序，zepto.js要最先调用。  </p>
 <h4 id="知识拓展：jQuery与Zepto的异同"><a href="#知识拓展：jQuery与Zepto的异同" class="headerlink" title="知识拓展：jQuery与Zepto的异同"></a>知识拓展：jQuery与Zepto的异同</h4><p>相同点：<br>Zepto最初是为移动端开发的库，是jQuery的轻量级替代品，因为它的API和jQuery相似，而文件更小。Zepto最大的优势是它的文件大小，只有8k多，是目前功能完备的库中最小的一个，尽管不大，Zepto所提供的工具足以满足开发程序的需要。大多数在jQuery中·常用的API和方法Zepto都有，Zepto中还有一些jQuery中没有的。另外，因为Zepto的API大部分都能和jQuery兼容，所以用起来极其容易，如果熟悉jQuery，就能很容易掌握Zepto。你可用同样的方式重用jQuery中的很多方法，也可以方面地把方法串在一起得到更简洁的代码，甚至不用看它的文档。<br>不同点：  </p>
 <ul>
@@ -430,7 +453,16 @@
     
     
     
+    
+    <div>
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
 
+    </div>
+    
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
@@ -478,9 +510,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/WebApp/" rel="tag"># WebApp</a>
+            <a href="/tags/WebApp/" rel="tag"><i class="fa fa-tag"></i> WebApp</a>
           
-            <a href="/tags/iReader/" rel="tag"># iReader</a>
+            <a href="/tags/iReader/" rel="tag"><i class="fa fa-tag"></i> iReader</a>
           
         </div>
       
@@ -493,7 +525,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/06/react-gallery/" rel="next" title="使用React实现图片画廊（送女朋友必备）">
+              <a href="/react-gallery.html" rel="next" title="使用React实现图片画廊（送女朋友必备）">
                 <i class="fa fa-chevron-left"></i> 使用React实现图片画廊（送女朋友必备）
               </a>
             
@@ -502,6 +534,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/responsive-web.html" rel="prev" title="一款响应式的网站Demo">
+                一款响应式的网站Demo <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -555,6 +591,8 @@
 
   <aside id="sidebar" class="sidebar">
     
+      <div id="sidebar-dimmer"></div>
+    
     <div class="sidebar-inner">
 
       
@@ -585,7 +623,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -607,7 +645,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -615,6 +653,13 @@
 
         </nav>
 
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
         
 
         <div class="links-of-author motion-element">
@@ -634,7 +679,7 @@
               <span class="links-of-author-item">
                 <a href="chenkaixin2011" target="_blank" title="微信">
                   
-                    <i class="fa fa-fw fa-twitter"></i>
+                    <i class="fa fa-fw fa-weixin"></i>
                   
                     
                       微信
@@ -660,6 +705,17 @@
                   
                     
                       E-Mail
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="417386855" target="_blank" title="QQ">
+                  
+                    <i class="fa fa-fw fa-qq"></i>
+                  
+                    
+                      QQ
                     
                 </a>
               </span>
@@ -852,8 +908,8 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/08/06/iReader/';
-          this.page.identifier = '2017/08/06/iReader/';
+          this.page.url = 'http://yoursite.com/iReader.html';
+          this.page.identifier = 'iReader.html';
           this.page.title = '一个手机阅读器的WebApp';
         };
         var d = document, s = d.createElement('script');

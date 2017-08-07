@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://yoursite.com/responsive-web.html</loc>
+    
+    <lastmod>2017-08-07T01:23:38.917Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/Hello-World.html</loc>
+    
+    <lastmod>2017-08-07T00:41:00.917Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/iReader.html</loc>
+    
+    <lastmod>2017-08-06T13:47:51.031Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/react-gallery.html</loc>
+    
+    <lastmod>2017-08-06T12:19:00.241Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    
+    <lastmod>2017-08-06T11:53:07.527Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/404.html</loc>
+    
+    <lastmod>2017-08-06T09:59:17.131Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    
+    <lastmod>2017-08-06T09:38:03.011Z</lastmod>
+    
+  </url>
+  
+</urlset>
