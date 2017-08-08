@@ -1973,7 +1973,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3b36ff;
+  background: #f9dd4d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3085,6 +3085,7 @@ pre .javascript .function {
 }
 .links-of-author-item {
   margin: 5px 0 0;
+  width: 50%;
 }
 .links-of-author-item a {
   box-sizing: border-box;
@@ -3095,9 +3096,6 @@ pre .javascript .function {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s;
 }
 .links-of-author-item a {
   display: block;
@@ -3135,6 +3133,7 @@ pre .javascript .function {
 }
 .links-of-blogroll-inline .links-of-blogroll-item {
   margin: 5px 0 0;
+  width: 50%;
 }
 .links-of-blogroll-inline .links-of-blogroll-item a {
   box-sizing: border-box;
@@ -3145,9 +3144,6 @@ pre .javascript .function {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s;
 }
 @media (max-width: 767px) {
   .post-body {
