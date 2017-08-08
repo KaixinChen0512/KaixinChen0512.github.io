@@ -164,6 +164,16 @@
 
 
 
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9a71b40a75644c69244c41661dd7f424";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
 
 
 
@@ -438,6 +448,17 @@
 
           
           
+             <span id="/Hello-World.html" class="leancloud_visitors" data-flag-title="第一个脚印">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
@@ -636,6 +657,17 @@
 
           
           
+             <span id="/SEO.html" class="leancloud_visitors" data-flag-title="前端面试系列（一）：网站优化的解决方案">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
@@ -689,7 +721,7 @@
       
         
           
-            <blockquote class="blockquote-center"><p>写在前面：该系列是博主研究生即将毕业寻觅工作之际，为了更好地充实自己的知识库，在网络上和项目中总结的大量题目，现分享出来，愿大家能一同进步，此外如果各位看客有什么问题或者建议，都可以通过站内的联系方式或者留言与我进行交流。</p>
+            <blockquote class="blockquote-center"><p>该系列是博主研究生即将毕业寻觅工作之际，为更好充实自己的知识库，在网络上和项目中总结的大量经验，现分享出来，愿大家能一同进步。有些地方可能因为时间问题浅尝辄止，各位看客若有疑问或建议，皆可通过站内的联系方式或留言与我交流。</p>
 </blockquote>  
 <h3 id="文件合并（目的是减少http请求）"><a href="#文件合并（目的是减少http请求）" class="headerlink" title="文件合并（目的是减少http请求）"></a>文件合并（目的是减少http请求）</h3><p>Web性能优化最佳实践中最重要的一条是减少HTTP 请求，减少HTTP请求的方案主要有合并JavaScript和CSS文件、CSS Sprites、图像映射 （Image Map）和使用Data URI来编码图片。  </p>
 <h4 id="图像映射（Image-Map）"><a href="#图像映射（Image-Map）" class="headerlink" title="图像映射（Image Map）"></a>图像映射（Image Map）</h4><p>在<img>标签内使用usemap属性制定一个<map>标签的id；然后在<map>标签内添加不同的<area>标签，每个<area>标签内有shape属性（可定义为rect、circle、poly）、coords属性（代表不同shape的定位）、href属性、alt属性等。即可实现在一张图上的不同区域能够映射不同的图像地址。  </map></map></p>
@@ -830,6 +862,17 @@
           
 
           
+          
+             <span id="/responsive-web.html" class="leancloud_visitors" data-flag-title="一款响应式的网站Demo">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -1001,6 +1044,17 @@
           
 
           
+          
+             <span id="/iReader.html" class="leancloud_visitors" data-flag-title="一个手机阅读器的WebApp">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -1194,6 +1248,17 @@
           
 
           
+          
+             <span id="/react-gallery.html" class="leancloud_visitors" data-flag-title="使用React实现图片画廊（送女朋友必备）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -1929,6 +1994,113 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("XiXDw2kMe5L5To5Nk5lN51nA-gzGzoHsz", "q4F3Y41OKzl6iy21wuz9kwvs");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
