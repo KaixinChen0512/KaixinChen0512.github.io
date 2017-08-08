@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://chenkaixin.cn/Hello-World.html</loc>
+    
+    <lastmod>2017-08-08T14:20:42.524Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://chenkaixin.cn/SEO.html</loc>
     
     <lastmod>2017-08-08T13:09:13.223Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://chenkaixin.cn/iReader.html</loc>
     
     <lastmod>2017-08-08T12:51:53.047Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chenkaixin.cn/Hello-World.html</loc>
-    
-    <lastmod>2017-08-07T00:41:00.917Z</lastmod>
     
   </url>
   
