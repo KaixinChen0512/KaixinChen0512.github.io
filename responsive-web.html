@@ -137,7 +137,7 @@
 <meta property="og:site_name" content="一天一颗蛋的开心">
 <meta property="og:description" content="提问：如何才能提高我的GitHub的star和follow数呢？    本作品原始灵感来源慕课网实战视频，如果大家有需要可以star我的GitHub，里面还有许多实战的源码，之后也会不断更新。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-08T12:52:06.356Z">
+<meta property="og:updated_time" content="2017-08-08T14:35:28.123Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一款响应式的网站Demo">
 <meta name="twitter:description" content="提问：如何才能提高我的GitHub的star和follow数呢？    本作品原始灵感来源慕课网实战视频，如果大家有需要可以star我的GitHub，里面还有许多实战的源码，之后也会不断更新。">
@@ -476,7 +476,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  2,959
+                  2,973
                 </span>
               
 
@@ -516,7 +516,7 @@
         <blockquote class="blockquote-center"><p>提问：如何才能提高我的GitHub的star和follow数呢？</p>
 </blockquote>  
 <p>本作品原始灵感来源慕课网实战视频，如果大家有需要可以star我的<a href="https://github.com/KaixinChen0512" target="_blank" rel="external">GitHub</a>，里面还有许多实战的源码，之后也会不断更新。<br><a id="more"></a><br>接下来记录一些编程当中的重难点   </p>
-<h3 id="viewport视口"><a href="#viewport视口" class="headerlink" title="viewport视口"></a>viewport视口</h3><p>对于PC端：<br>视口就是浏览器主窗口的区域<br>对于手机端：<br>layout port布局视口：一个虚拟的视口，一般是960px来把页面先进行渲染<br>visual port可视视口：一个网页在手机上呈现出来的区域的宽度，用户的缩放会改变可视视口的大小，不会改变布局视口的大小<br>ideal port理想视口：布局视口在一个设备上的最佳尺寸，理想视口下的页面便于浏览器的浏览和阅读（针对移动端），即设置<meta name="viewport" content="width=device-width">使得布局视口等于可视视口，这样布局视口就成为了理想视口，若不指定则会是厂商默认的可能960px的布局视口<br>相当于用放大镜（可视视口）来看书（布局视口）  </p>
+<h3 id="viewport视口"><a href="#viewport视口" class="headerlink" title="viewport视口"></a>viewport视口</h3><p>对于PC端：<br>视口就是浏览器主窗口的区域<br>对于手机端：<br>layout port布局视口：一个虚拟的视口，一般是960px来把页面先进行渲染<br>visual port可视视口：一个网页在手机上呈现出来的区域的宽度，用户的缩放会改变可视视口的大小，不会改变布局视口的大小<br>ideal port理想视口：布局视口在一个设备上的最佳尺寸，理想视口下的页面便于浏览器的浏览和阅读（针对移动端），即设置<code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;</code>使得布局视口等于可视视口，这样布局视口就成为了理想视口，若不指定则会是厂商默认的可能960px的布局视口<br>相当于用放大镜（可视视口）来看书（布局视口）  </p>
 <h3 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h3><p>场景：父元素container里的p和div设置了float，则父元素会发生高度塌陷  </p>
 <ul>
 <li>方法1：在父元素内最后的位置添加一个div，style设为clear=both。但是添加了一个废的标签，不利于维护。  </li>
@@ -566,9 +566,9 @@
 <h4 id="需要用到的语义化元素很少？"><a href="#需要用到的语义化元素很少？" class="headerlink" title="需要用到的语义化元素很少？"></a>需要用到的语义化元素很少？</h4><p>那我们就自己来实现<em>html5shiv</em><br>head中：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--[if lt IE 9]&gt;</span></div><div class="line"><span class="comment">  &lt;script&gt;</span></div><div class="line"><span class="comment">   ;(function()&#123;</span></div><div class="line"><span class="comment">     var elements = ['section','header','footer','article'];</span></div><div class="line"><span class="comment">     var i;</span></div><div class="line"><span class="comment">     for(i in elements)&#123;</span></div><div class="line"><span class="comment">       document.createElement(elements[i]);</span></div><div class="line"><span class="comment">     &#125;</span></div><div class="line"><span class="comment">   &#125;)();</span></div><div class="line"><span class="comment">  &lt;/script&gt;</span></div><div class="line"><span class="comment">&lt;![endif]--&gt;</span></div></pre></td></tr></table></figure></p>
 <p>css中：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">style</span>&gt;</div><div class="line">  <span class="selector-tag">section</span>, <span class="selector-tag">header</span>, <span class="selector-tag">footer</span>, <span class="selector-tag">article</span> &#123;<span class="attribute">display</span>: block&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure></p>
 <ul>
-<li>IE6-8不支持媒体查询，可以引入repond库，使其支持min-width和max-width这两个特性<br>使用方法：引入respond.min.js即可，但是要在css的后面。<br>实现思路：<br>1.把head中所有<link rel="“sheetstyle”" href="“xx”/">的css路径取出来放入数组<br>2.然后遍历数组一个个发ajax请求<br>3.ajax回调后仅分析response中的media query的min-width和max-width语法，分析出viewport变化区间对应相应的css块<br>4.页面初始化时和window.resize时，根据当前viewport使用相应的css块。  </li>
+<li>IE6-8不支持媒体查询，可以引入repond库，使其支持min-width和max-width这两个特性<br>使用方法：引入respond.min.js即可，但是要在css的后面。<br>实现思路：<br>1.把head中所有<code>&lt;link rel=“sheetstyle” href=“xx”/&gt;</code>的css路径取出来放入数组<br>2.然后遍历数组一个个发ajax请求<br>3.ajax回调后仅分析response中的media query的min-width和max-width语法，分析出viewport变化区间对应相应的css块<br>4.页面初始化时和window.resize时，根据当前viewport使用相应的css块。  </li>
 <li>modernizr：用来进行防御性编程，来进行兼容性检测<br>当你在网页中嵌入Modernizr的脚本时，它会检测当前浏览器是否支持CSS3的特性，比如 @font-face、border-radius、 border-image、box-shadow、rgba() 等，同时也会检测是否支持HTML5的特性——比如audio、video、本地储存、和新的input标签的类型和属性等。在获取到这些信息的基础上，你可以在那些支持这些功能的浏览器上使用它们，来决定是否创建一个基于JS的fallback，或者对那些不支持的浏览器进行简单的优雅降级。另外，Modernizr还可以令IE支持对HTML5的元素应用CSS样式，这样开发者就可以立即使用这些更富有语义化的标签了。（这样咱们就不需要上面提到的html5shiv了）<br>此外在Modernizr 2.0版中， 它增加了一个针对JavaScript和CSS的条件资源加载器(conditional resource loader)。该资源加载器接受三个参数，第一个是表达式，列举了所需的特性。第二个参数是如果表达式返回true则加载的JavaScript和 CSS文件列表。第三个参数是所需特性不存在的情况下备用的文件列表。除了优雅降级，加载器还可用于引入polyfill。（又可以用到上面的知识）<br>Modernizr是基于渐进增强理论来开发的，所以它支持并鼓励开发者一层一层的创建他们的网站。一切从一个应用了Javascript的空闲地基开始，一个接一个的添加增强的应用层。因为使用了Modernizr，所以你容易知道浏览器都支持什么。<br>工作原理：Modernizr 会在页面加载后立即检测特性；然后创建一个包含检测结果的 JavaScript 对象，同时在 html 元素加入方便你调整 CSS 的 class 名。  </li>
-<li>browser-sync：多个设备上进行同步调试<br>browser-sync start <options>      实例：browser-sync start –server –port 1234<br>–port 指定要使用的端口<br>–files 文件路径<br>–server 运行本地服务器</options></li>
+<li><code>browser-sync</code>：多个设备上进行同步调试<br><code>browser-sync start &lt;options&gt;</code>      实例：<code>browser-sync start --server --port 1234</code><br><code>--port</code> 指定要使用的端口<br><code>--files</code> 文件路径<br><code>--server</code> 运行本地服务器</li>
 </ul>
 
       
@@ -599,7 +599,7 @@
   <p><span>本文标题:</span><a href="/responsive-web.html">一款响应式的网站Demo</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Kayson0512 的个人博客">Kayson0512</a></p>
   <p><span>发布时间:</span>2017年08月07日 - 08:08</p>
-  <p><span>最后更新:</span>2017年08月08日 - 20:08</p>
+  <p><span>最后更新:</span>2017年08月08日 - 22:08</p>
   <p><span>原始链接:</span><a href="/responsive-web.html" title="一款响应式的网站Demo">http://chenkaixin.cn/responsive-web.html</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://chenkaixin.cn/responsive-web.html"  aria-label="复制成功！"></i></span>
   </p>

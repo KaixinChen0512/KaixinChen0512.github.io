@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://chenkaixin.cn/iReader.html</loc>
+    
+    <lastmod>2017-08-08T14:35:38.731Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chenkaixin.cn/responsive-web.html</loc>
+    
+    <lastmod>2017-08-08T14:35:28.123Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://chenkaixin.cn/Hello-World.html</loc>
     
     <lastmod>2017-08-08T14:20:42.524Z</lastmod>
@@ -16,23 +30,9 @@
   </url>
   
   <url>
-    <loc>http://chenkaixin.cn/responsive-web.html</loc>
-    
-    <lastmod>2017-08-08T12:52:06.356Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://chenkaixin.cn/react-gallery.html</loc>
     
     <lastmod>2017-08-08T12:51:53.104Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chenkaixin.cn/iReader.html</loc>
-    
-    <lastmod>2017-08-08T12:51:53.047Z</lastmod>
     
   </url>
   
