@@ -137,13 +137,13 @@
 <meta property="og:site_name" content="一天一颗蛋的开心">
 <meta property="og:description" content="提问：程序猿该如何找到女朋友？   这个小项目用到的主要技术是React以及webpack，历时差不多断断续续三天时间吧，初衷是为了入门react以及对webpack的工作原理有个更深刻的认识，当然其中也遇到了不少难题，现做记录，话不多说了，上效果图。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://oudaz22af.bkt.clouddn.com/react-gallery.gif">
+<meta property="og:image" content="http://oudaz22af.bkt.clouddn.com/react-gallery-s.gif">
 <meta property="og:image" content="http://chenkaixin.cn/images/gallery/bug.jpg">
-<meta property="og:updated_time" content="2017-08-09T01:28:37.271Z">
+<meta property="og:updated_time" content="2017-08-09T01:36:51.952Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用React实现图片画廊（送女朋友必备）">
 <meta name="twitter:description" content="提问：程序猿该如何找到女朋友？   这个小项目用到的主要技术是React以及webpack，历时差不多断断续续三天时间吧，初衷是为了入门react以及对webpack的工作原理有个更深刻的认识，当然其中也遇到了不少难题，现做记录，话不多说了，上效果图。">
-<meta name="twitter:image" content="http://oudaz22af.bkt.clouddn.com/react-gallery.gif">
+<meta name="twitter:image" content="http://oudaz22af.bkt.clouddn.com/react-gallery-s.gif">
 
 
 
@@ -518,7 +518,7 @@
       
         <blockquote class="blockquote-center"><p>提问：程序猿该如何找到女朋友？ </p>
 </blockquote>
-<p>这个小项目用到的主要技术是React以及webpack，历时差不多断断续续三天时间吧，初衷是为了入门react以及对webpack的工作原理有个更深刻的认识，当然其中也遇到了不少难题，现做记录，话不多说了，上效果图。<br><img src="http://oudaz22af.bkt.clouddn.com/react-gallery.gif" alt="画廊效果图"><br><a id="more"></a></p>
+<p>这个小项目用到的主要技术是React以及webpack，历时差不多断断续续三天时间吧，初衷是为了入门react以及对webpack的工作原理有个更深刻的认识，当然其中也遇到了不少难题，现做记录，话不多说了，上效果图。<br><img src="http://oudaz22af.bkt.clouddn.com/react-gallery-s.gif" alt="画廊效果图"><br><a id="more"></a></p>
 <h3 id="初识React"><a href="#初识React" class="headerlink" title="初识React"></a>初识React</h3><p>首先通过React的createClass方法来创建一个React的组件，注意，这里创建的并不是真实的DOM节点:<br><figure class="highlight typescript"><figcaption><span>jsx</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Hello = React.createClass(</div><div class="line">  <span class="comment">// 添加function、state等</span></div><div class="line">  render: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &lt;div&gt;Hello &#123;<span class="keyword">this</span>.props.name&#125;&lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">  &#125;</span></div><div class="line"><span class="regexp">)</span></div></pre></td></tr></table></figure></p>
 <p>在ES6中可以通过class Hello extends React.Component{}，来实现创建React组件；<br>用render(){}来替代render:function(){}<br>然后通过调用React的render方法来创建一个组件的实例：<br><figure class="highlight typescript"><figcaption><span>jsx</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ReactDOM.render(&lt;Hello name=<span class="string">"React!"</span> /&gt;,</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'container'</span>)</div><div class="line">);</div></pre></td></tr></table></figure></p>
 <p>其中render方法接受两个参数，第一个是React的组件，第二个是要插入的DOM节点 。  </p>
