@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://chenkaixin.cn/SEO.html</loc>
+    <lastmod>2017-08-09T03:11:28.753Z</lastmod>
+    <data>
+        <display>
+        <title>前端面试系列（一）：网站优化的解决方案</title>
+        <pubTime>2017-08-08T09:00:48.000Z</pubTime>
+        
+        <tag>seo</tag>
+         
+        <tag>计算机网络基础</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端面试" url="http://chenkaixin.cn/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chenkaixin.cn/HTML5%E6%96%B0%E7%89%B9%E6%80%A7.html</loc>
+    <lastmod>2017-08-09T03:11:03.759Z</lastmod>
+    <data>
+        <display>
+        <title>前端面试系列（二）：面试常问的几个HTML5特性</title>
+        <pubTime>2017-08-09T01:57:28.000Z</pubTime>
+        
+        <tag>计算机网络基础</tag>
+         
+        <tag>HTML5</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端面试" url="http://chenkaixin.cn/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chenkaixin.cn/%E6%96%B0%E8%80%81AJAX.html</loc>
+    <lastmod>2017-08-09T03:08:50.062Z</lastmod>
+    <data>
+        <display>
+        <title>前端面试系列（三）：新老AJAX（XHR1和XHR2）</title>
+        <pubTime>2017-08-09T02:47:50.000Z</pubTime>
+        
+        <tag>计算机网络基础</tag>
+         
+        <tag>AJAX</tag>
+         
+        <tag>XHR</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端面试" url="http://chenkaixin.cn/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chenkaixin.cn/react-gallery.html</loc>
+    <lastmod>2017-08-09T01:49:27.493Z</lastmod>
+    <data>
+        <display>
+        <title>使用React实现图片画廊（送女朋友必备）</title>
+        <pubTime>2017-08-06T06:11:15.000Z</pubTime>
+        
+        <tag>react</tag>
+         
+        <tag>webpack</tag>
+         
+        <tag>gallery</tag>
+         
+         
+           
+             
+              <breadCrumb title="作品" url="http://chenkaixin.cn/categories/%E4%BD%9C%E5%93%81/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chenkaixin.cn/Hello-World.html</loc>
+    <lastmod>2017-08-09T01:49:27.466Z</lastmod>
+    <data>
+        <display>
+        <title>第一个脚印</title>
+        <pubTime>2017-08-06T05:33:46.000Z</pubTime>
+        
+        <tag>for fun</tag>
+         
+         
+           
+             
+              <breadCrumb title="随笔" url="http://chenkaixin.cn/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chenkaixin.cn/iReader.html</loc>
+    <lastmod>2017-08-09T01:19:19.814Z</lastmod>
+    <data>
+        <display>
+        <title>一个手机阅读器的WebApp</title>
+        <pubTime>2017-08-06T12:35:44.000Z</pubTime>
+        
+        <tag>WebApp</tag>
+         
+        <tag>iReader</tag>
+         
+         
+           
+             
+              <breadCrumb title="作品" url="http://chenkaixin.cn/categories/%E4%BD%9C%E5%93%81/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chenkaixin.cn/responsive-web.html</loc>
+    <lastmod>2017-08-08T14:35:28.123Z</lastmod>
+    <data>
+        <display>
+        <title>一款响应式的网站Demo</title>
+        <pubTime>2017-08-07T00:41:28.000Z</pubTime>
+        
+        <tag>responsive</tag>
+         
+        <tag>WebDemo</tag>
+         
+         
+           
+             
+              <breadCrumb title="作品" url="http://chenkaixin.cn/categories/%E4%BD%9C%E5%93%81/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+</urlset>
