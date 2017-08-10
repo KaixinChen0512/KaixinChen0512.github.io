@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://chenkaixin.cn/%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E5%92%8C%E7%9B%B8%E5%AF%B9%E5%AE%9A%E4%BD%8D.html</loc>
+    <lastmod>2017-08-10T13:32:29.236Z</lastmod>
+    <data>
+        <display>
+        <title>绝对定位和相对定位</title>
+        <pubTime>2017-08-10T13:27:10.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端面试" url="http://chenkaixin.cn/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://chenkaixin.cn/%E5%87%BD%E6%95%B0%E7%BB%91%E5%AE%9A%E5%92%8C%E5%87%BD%E6%95%B0%E6%9F%AF%E9%87%8C%E5%8C%96.html</loc>
-    <lastmod>2017-08-10T09:16:22.263Z</lastmod>
+    <lastmod>2017-08-10T09:24:41.145Z</lastmod>
     <data>
         <display>
         <title>函数绑定和函数柯里化</title>
