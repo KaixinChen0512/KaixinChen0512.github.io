@@ -111,7 +111,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="for fun," />
+  <meta name="keywords" content="函数绑定,函数柯里化," />
 
 
 
@@ -129,18 +129,18 @@
 
 
 
-<meta name="description" content="写在前面     我是陈凯鑫，熟悉的朋友都爱叫我开心。我是一个默默走在代码漫漫长路上的乐观积极的前端er。没有太多的天赋，因为热爱，所以坚持。渴望学习，同时也乐于分享。非常欢迎大家访问我的GitHub，里面有我的一些学习和自己创作的小作品    一个基于react和webpack的画廊小作品   一个手机阅读器的WebApp   一个响应式的WebDemo   一个基于Vue1.0的外卖WebAp">
-<meta name="keywords" content="for fun">
+<meta name="description" content="本篇文章大量参考JavaScript高级程序设计第三版中js高级编程的内容   函数绑定一个简单的函数绑定在JavaScript与DOM交互中经常需要使用函数绑定，定义一个函数然后将其绑定到特定DOM元素或集合的某个事件触发程序上，绑定函数经常和回调函数及事件处理程序一起使用，以便把函数作为变量传递的同时保留代码执行环境。">
+<meta name="keywords" content="函数绑定,函数柯里化">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一个脚印">
-<meta property="og:url" content="http://chenkaixin.cn/Hello-World.html">
+<meta property="og:title" content="函数绑定和函数柯里化">
+<meta property="og:url" content="http://chenkaixin.cn/函数绑定和函数柯里化.html">
 <meta property="og:site_name" content="一天一颗蛋的开心">
-<meta property="og:description" content="写在前面     我是陈凯鑫，熟悉的朋友都爱叫我开心。我是一个默默走在代码漫漫长路上的乐观积极的前端er。没有太多的天赋，因为热爱，所以坚持。渴望学习，同时也乐于分享。非常欢迎大家访问我的GitHub，里面有我的一些学习和自己创作的小作品    一个基于react和webpack的画廊小作品   一个手机阅读器的WebApp   一个响应式的WebDemo   一个基于Vue1.0的外卖WebAp">
+<meta property="og:description" content="本篇文章大量参考JavaScript高级程序设计第三版中js高级编程的内容   函数绑定一个简单的函数绑定在JavaScript与DOM交互中经常需要使用函数绑定，定义一个函数然后将其绑定到特定DOM元素或集合的某个事件触发程序上，绑定函数经常和回调函数及事件处理程序一起使用，以便把函数作为变量传递的同时保留代码执行环境。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-09T01:49:27.466Z">
+<meta property="og:updated_time" content="2017-08-10T09:16:22.263Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一个脚印">
-<meta name="twitter:description" content="写在前面     我是陈凯鑫，熟悉的朋友都爱叫我开心。我是一个默默走在代码漫漫长路上的乐观积极的前端er。没有太多的天赋，因为热爱，所以坚持。渴望学习，同时也乐于分享。非常欢迎大家访问我的GitHub，里面有我的一些学习和自己创作的小作品    一个基于react和webpack的画廊小作品   一个手机阅读器的WebApp   一个响应式的WebDemo   一个基于Vue1.0的外卖WebAp">
+<meta name="twitter:title" content="函数绑定和函数柯里化">
+<meta name="twitter:description" content="本篇文章大量参考JavaScript高级程序设计第三版中js高级编程的内容   函数绑定一个简单的函数绑定在JavaScript与DOM交互中经常需要使用函数绑定，定义一个函数然后将其绑定到特定DOM元素或集合的某个事件触发程序上，绑定函数经常和回调函数及事件处理程序一起使用，以便把函数作为变量传递的同时保留代码执行环境。">
 
 
 
@@ -169,12 +169,12 @@
 
 
 
-  <link rel="canonical" href="http://chenkaixin.cn/Hello-World.html"/>
+  <link rel="canonical" href="http://chenkaixin.cn/函数绑定和函数柯里化.html"/>
 
 
 <title>一天一颗蛋的开心</title>
 
-  <title>第一个脚印 | 一天一颗蛋的开心</title>
+  <title>函数绑定和函数柯里化 | 一天一颗蛋的开心</title>
   
 
 
@@ -381,7 +381,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://chenkaixin.cn/Hello-World.html">
+    <link itemprop="mainEntityOfPage" href="http://chenkaixin.cn/函数绑定和函数柯里化.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kayson0512">
@@ -398,7 +398,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">第一个脚印</h1>
+          <h1 class="post-title" itemprop="name headline">函数绑定和函数柯里化</h1>
         
 
         <div class="post-meta">
@@ -410,8 +410,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-06T13:33:46+08:00">
-                2017-08-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T15:45:28+08:00">
+                2017-08-10
               </time>
             
 
@@ -433,8 +433,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
+                  <a href="/categories/JS高级程序/" itemprop="url" rel="index">
+                    <span itemprop="name">JS高级程序</span>
                   </a>
                 </span>
 
@@ -450,7 +450,7 @@
 
           
           
-             <span id="/Hello-World.html" class="leancloud_visitors" data-flag-title="第一个脚印">
+             <span id="/函数绑定和函数柯里化.html" class="leancloud_visitors" data-flag-title="函数绑定和函数柯里化">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -475,7 +475,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  190
+                  1,207
                 </span>
               
 
@@ -491,7 +491,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  1
+                  5
                 </span>
               
             </div>
@@ -512,17 +512,22 @@
       
 
       
-        <blockquote class="blockquote-center"><p>写在前面 </p>
-</blockquote>  
-<p>我是陈凯鑫，熟悉的朋友都爱叫我开心。<br>我是一个默默走在代码漫漫长路上的乐观积极的前端er。<br>没有太多的天赋，因为热爱，所以坚持。<br>渴望学习，同时也乐于分享。<br>非常欢迎大家访问<a href="https://github.com/KaixinChen0512" target="_blank" rel="external">我的GitHub</a>，里面有我的一些学习和自己创作的小作品  </p>
-<ul>
-<li><a href="https://github.com/KaixinChen0512/react-gallery" target="_blank" rel="external">一个基于react和webpack的画廊小作品</a>  </li>
-<li><a href="https://github.com/KaixinChen0512/iReader" target="_blank" rel="external">一个手机阅读器的WebApp</a>  </li>
-<li><a href="https://github.com/KaixinChen0512/responsive-web" target="_blank" rel="external">一个响应式的WebDemo</a>  </li>
-<li><a href="https://github.com/KaixinChen0512/Vue1.0-Eleme" target="_blank" rel="external">一个基于Vue1.0的外卖WebApp</a>  <a id="more"></a>  
-</li>
-</ul>
-<p>接下来最开始的几篇博客我就来写一写做这些小作品的时候遇到的坑和一些重难点吧<br>网站板块右侧主体部分提供所有文章的</p>
+        <p>本篇文章大量参考JavaScript高级程序设计第三版中js高级编程的内容  </p>
+<h2 id="函数绑定"><a href="#函数绑定" class="headerlink" title="函数绑定"></a>函数绑定</h2><h3 id="一个简单的函数绑定"><a href="#一个简单的函数绑定" class="headerlink" title="一个简单的函数绑定"></a>一个简单的函数绑定</h3><p>在JavaScript与DOM交互中经常需要使用函数绑定，定义一个函数然后将其绑定到特定DOM元素或集合的某个事件触发程序上，绑定函数经常和回调函数及事件处理程序一起使用，以便把函数作为变量传递的同时保留代码执行环境。<br><a id="more"></a><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"btnTest"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"Button"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined">            </span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> handler=&#123;</span></div><div class="line"><span class="javascript">            message:<span class="string">"Event handled."</span>,</span></div><div class="line"><span class="javascript">            handlerFun:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="javascript">                alert(<span class="keyword">this</span>.message);</span></div><div class="line"><span class="undefined">            &#125;</span></div><div class="line"><span class="undefined">        &#125;;     </span></div><div class="line"><span class="javascript">        <span class="built_in">document</span>.getElementById(<span class="string">'btnTest'</span>).onclick=handler.handlerFun;</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>上面的例子创建了一个handler对象，handler.handlerFun()方法被分配为DOM按钮的click事件处理程序。设计意图是这样的：当点击按钮的时候触发该方法，弹出对话框显示handler定义的message，然而点击后对话框内容却是undefined。熟悉闭包的同学可以轻松看出来这个问题在于没有保存handler.handlerFun()方法的执行环境，this对象最后指向了DOM按钮而非handler。可以使用闭包解决此问题，修改函数绑定语句<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'btnTest'</span>).onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  handler.handlerFun();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这样就可以得到预期的结果，这个解决方案在onclick程序内部使用一个闭包直接调用handler.handlerFun()方法，当然这是特定于此场景的解决方案，创建多个闭包可能会令代码难以理解和调试。  </p>
+<h3 id="自定义bind函数"><a href="#自定义bind函数" class="headerlink" title="自定义bind函数"></a>自定义bind函数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">bind</span>(<span class="params">fn,context</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> fn.apply(context,<span class="built_in">arguments</span>);</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'btnTest'</span>).onclick=bind(handler.handlerFun,handler);</div></pre></td></tr></table></figure>
+<p>通过自定义的bind函数可以将函数绑定到指定环境，bind()函数接收两个参数：一个绑定函数，一个执行环境，并返回一个在执行环境中调用绑定函数的函数。看起来很简单，但是其功能很强大，在bing()中创建了一个闭包，闭包使用apply()调用传入的函数，并给apply()传入执行环境和参数，这里的arguments是内部匿名函数的，而非bind()的。当调用返回的函数时，它会在给定的函数中执行被传入的函数，并给出所有参数。上面例子的调用handler.handlerFun依旧可以得到参数event，因为所有参数在都通过绑定的函数传递给它了。<br>在ES6中，直接为所有函数定义了一个原生的bind()函数<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"btnTest"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"Button"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined">            </span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> handler=&#123;</span></div><div class="line"><span class="javascript">            message:<span class="string">"Event handled."</span>,</span></div><div class="line"><span class="javascript">            handlerFun:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="javascript">                alert(<span class="keyword">this</span>.message);</span></div><div class="line"><span class="undefined">            &#125;</span></div><div class="line"><span class="undefined">        &#125;;     </span></div><div class="line"><span class="javascript">        <span class="built_in">document</span>.getElementById(<span class="string">'btnTest'</span>).onclick=handler.handlerFun.bind(handler);</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="函数柯里化"><a href="#函数柯里化" class="headerlink" title="函数柯里化"></a>函数柯里化</h2><p>百科的解释：</p>
+<blockquote>
+<p>在计算机科学中，柯里化（英语：Currying），又译为卡瑞化或加里化，是把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。这个技术由 Christopher Strachey 以逻辑学家哈斯凯尔·加里命名的，尽管它是 Moses Schönfinkel 和 Gottlob Frege 发明的。  </p>
+</blockquote>
+<h3 id="最常见的实现："><a href="#最常见的实现：" class="headerlink" title="最常见的实现："></a>最常见的实现：</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">curry</span>(<span class="params">fn</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> args = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>,<span class="number">1</span>);</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> innerArgs = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</div><div class="line">      <span class="keyword">var</span> finalArgs = args.concat(innerArgs);</div><div class="line">      <span class="keyword">return</span> fn.apply(<span class="literal">null</span>,finalArgs);</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="最常见的应用"><a href="#最常见的应用" class="headerlink" title="最常见的应用"></a>最常见的应用</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">square</span>(<span class="params">i</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> i * i;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">dubble</span>(<span class="params">i</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> i *= <span class="number">2</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">map</span>(<span class="params">handeler, list</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> list.map(handeler);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 数组的每一项平方</span></div><div class="line">map(square, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]);</div><div class="line">map(square, [<span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]);</div><div class="line">map(square, [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>]);</div><div class="line"><span class="comment">// ......</span></div><div class="line"></div><div class="line"><span class="comment">// 数组的每一项加倍</span></div><div class="line">map(dubble, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]);</div><div class="line">map(dubble, [<span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]);</div><div class="line">map(dubble, [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>]);</div></pre></td></tr></table></figure>
+<p>例子中，创建了一个map通用函数，用于适应不同的应用场景。显然，通用性不用怀疑。同时，例子中重复传入了相同的处理函数：square和dubble。<br>那么我们来用柯里化改造一下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">square</span>(<span class="params">i</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> i * i;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">dubble</span>(<span class="params">i</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> i *= <span class="number">2</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">map</span>(<span class="params">handeler, list</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> list.map(handeler);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> mapSQ = curry(map, square);</div><div class="line">mapSQ([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]);</div><div class="line">mapSQ([<span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]);</div><div class="line">mapSQ([<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>]);</div><div class="line"><span class="comment">// ......</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> mapDB = curry(map, dubble);</div><div class="line">mapDB([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]);</div><div class="line">mapDB([<span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]);</div><div class="line">mapDB([<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>]);</div></pre></td></tr></table></figure></p>
+<p>我们缩小了函数的适用范围，但同时提高函数的适性。  </p>
+<h2 id="将柯里化与函数绑定进行结合"><a href="#将柯里化与函数绑定进行结合" class="headerlink" title="将柯里化与函数绑定进行结合"></a>将柯里化与函数绑定进行结合</h2><p>函数柯里化通常作为函数绑定的一部分包含在其中，构造出更为复杂的bind函数。例如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">bind</span>(<span class="params">fn, context</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> args = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>,<span class="number">2</span>);</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> innerArgs = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</div><div class="line">      <span class="keyword">var</span> finalArgs = args.concat(innerArgs);</div><div class="line">      <span class="keyword">return</span> fn.apply(context,finalArgs);</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>ES6中的bind函数也实现了柯里化，只需要在this值之后传入另一个参数即可。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"btnTest"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"Button"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined">            </span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> handler=&#123;</span></div><div class="line"><span class="javascript">            message:<span class="string">"Event handled."</span>,</span></div><div class="line"><span class="javascript">            handlerFun:<span class="function"><span class="keyword">function</span>(<span class="params">name, event</span>)</span>&#123;</span></div><div class="line"><span class="javascript">                alert(<span class="keyword">this</span>.message + <span class="string">":"</span> + name + <span class="string">":"</span> + event.type);</span></div><div class="line"><span class="undefined">            &#125;</span></div><div class="line"><span class="undefined">        &#125;;     </span></div><div class="line"><span class="javascript">        <span class="built_in">document</span>.getElementById(<span class="string">'btnTest'</span>).onclick=handler.handlerFun.bind(handler, <span class="string">"btnTest"</span>);</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -542,6 +547,37 @@
     <div>
           
             
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/函数绑定和函数柯里化.html">函数绑定和函数柯里化</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Kayson0512 的个人博客">Kayson0512</a></p>
+  <p><span>发布时间:</span>2017年08月10日 - 15:08</p>
+  <p><span>最后更新:</span>2017年08月10日 - 17:08</p>
+  <p><span>原始链接:</span><a href="/函数绑定和函数柯里化.html" title="函数绑定和函数柯里化">http://chenkaixin.cn/函数绑定和函数柯里化.html</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://chenkaixin.cn/函数绑定和函数柯里化.html"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+  clipboard.on('success', $(function(){
+    $(".fa-clipboard").click(function(){
+    swal({
+      title: "",
+      text: '复制成功',
+      html: false,
+      timer: 500,
+      showConfirmButton: false
+      });
+    });
+    }));
+</script>
+
 
           
     </div>
@@ -592,7 +628,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/for-fun/" rel="tag"><i class="fa fa-tag"></i> for fun</a>
+            <a href="/tags/函数绑定/" rel="tag"><i class="fa fa-tag"></i> 函数绑定</a>
+          
+            <a href="/tags/函数柯里化/" rel="tag"><i class="fa fa-tag"></i> 函数柯里化</a>
           
         </div>
       
@@ -605,15 +643,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/浏览器跨域访问的实现.html" rel="next" title="前端面试系列（四）：浏览器跨域访问的实现">
+                <i class="fa fa-chevron-left"></i> 前端面试系列（四）：浏览器跨域访问的实现
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/react-gallery.html" rel="prev" title="使用React实现图片画廊（送女朋友必备）">
-                使用React实现图片画廊（送女朋友必备） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -692,8 +730,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -808,6 +855,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数绑定"><span class="nav-number">1.</span> <span class="nav-text">函数绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一个简单的函数绑定"><span class="nav-number">1.1.</span> <span class="nav-text">一个简单的函数绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义bind函数"><span class="nav-number">1.2.</span> <span class="nav-text">自定义bind函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数柯里化"><span class="nav-number">2.</span> <span class="nav-text">函数柯里化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#最常见的实现："><span class="nav-number">2.1.</span> <span class="nav-text">最常见的实现：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最常见的应用"><span class="nav-number">2.2.</span> <span class="nav-text">最常见的应用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将柯里化与函数绑定进行结合"><span class="nav-number">3.</span> <span class="nav-text">将柯里化与函数绑定进行结合</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

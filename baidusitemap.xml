@@ -4,8 +4,30 @@
 
     
   <url>
+    <loc>http://chenkaixin.cn/%E5%87%BD%E6%95%B0%E7%BB%91%E5%AE%9A%E5%92%8C%E5%87%BD%E6%95%B0%E6%9F%AF%E9%87%8C%E5%8C%96.html</loc>
+    <lastmod>2017-08-10T09:16:22.263Z</lastmod>
+    <data>
+        <display>
+        <title>函数绑定和函数柯里化</title>
+        <pubTime>2017-08-10T07:45:28.000Z</pubTime>
+        
+        <tag>函数绑定</tag>
+         
+        <tag>函数柯里化</tag>
+         
+         
+           
+             
+              <breadCrumb title="JS高级程序" url="http://chenkaixin.cn/categories/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://chenkaixin.cn/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AE%E7%9A%84%E5%AE%9E%E7%8E%B0.html</loc>
-    <lastmod>2017-08-09T14:46:15.425Z</lastmod>
+    <lastmod>2017-08-10T03:33:03.771Z</lastmod>
     <data>
         <display>
         <title>前端面试系列（四）：浏览器跨域访问的实现</title>
@@ -37,9 +59,9 @@
         <title>前端面试系列（一）：网站优化的解决方案</title>
         <pubTime>2017-08-08T09:00:48.000Z</pubTime>
         
-        <tag>seo</tag>
-         
         <tag>计算机网络基础</tag>
+         
+        <tag>seo</tag>
          
          
            
@@ -59,9 +81,9 @@
         <title>前端面试系列（二）：面试常问的几个HTML5特性</title>
         <pubTime>2017-08-09T01:57:28.000Z</pubTime>
         
-        <tag>计算机网络基础</tag>
-         
         <tag>HTML5</tag>
+         
+        <tag>计算机网络基础</tag>
          
          
            
