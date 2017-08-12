@@ -111,7 +111,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JS高级程序设计" />
+  <meta name="keywords" content="HTML5" />
 
 
 
@@ -129,18 +129,22 @@
 
 
 
-<meta name="description" content="本篇文章大量参考JavaScript高级程序设计第三版中js高级编程的内容   函数绑定一个简单的函数绑定在JavaScript与DOM交互中经常需要使用函数绑定，定义一个函数然后将其绑定到特定DOM元素或集合的某个事件触发程序上，绑定函数经常和回调函数及事件处理程序一起使用，以便把函数作为变量传递的同时保留代码执行环境。">
-<meta name="keywords" content="JS高级程序设计">
+<meta name="description" content="来，有兴趣的破解个下面的摩斯电码：-.-- --- ..- -....- .- .-. . -....- .... .- -. ... --- -- . -....- . -. --- ..- --. ....    一、应用程序缓存（Application Cache）通过创建cache manifest文件来创建Web应用的离线版本使用方法：">
+<meta name="keywords" content="HTML5">
 <meta property="og:type" content="article">
-<meta property="og:title" content="函数绑定和函数柯里化">
-<meta property="og:url" content="http://chenkaixin.cn/函数绑定和函数柯里化.html">
+<meta property="og:title" content="前端面试系列（二）：面试常问的几个HTML5特性">
+<meta property="og:url" content="http://chenkaixin.cn/new features of html5.html">
 <meta property="og:site_name" content="一天一颗蛋的开心">
-<meta property="og:description" content="本篇文章大量参考JavaScript高级程序设计第三版中js高级编程的内容   函数绑定一个简单的函数绑定在JavaScript与DOM交互中经常需要使用函数绑定，定义一个函数然后将其绑定到特定DOM元素或集合的某个事件触发程序上，绑定函数经常和回调函数及事件处理程序一起使用，以便把函数作为变量传递的同时保留代码执行环境。">
+<meta property="og:description" content="来，有兴趣的破解个下面的摩斯电码：-.-- --- ..- -....- .- .-. . -....- .... .- -. ... --- -- . -....- . -. --- ..- --. ....    一、应用程序缓存（Application Cache）通过创建cache manifest文件来创建Web应用的离线版本使用方法：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-11T02:01:27.827Z">
+<meta property="og:image" content="http://chenkaixin.cn/images/HTML5新特性/audio.jpg">
+<meta property="og:image" content="http://chenkaixin.cn/images/HTML5新特性/video.jpg">
+<meta property="og:image" content="http://chenkaixin.cn/images/HTML5新特性/webworkers.jpg">
+<meta property="og:updated_time" content="2017-08-09T03:11:03.759Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="函数绑定和函数柯里化">
-<meta name="twitter:description" content="本篇文章大量参考JavaScript高级程序设计第三版中js高级编程的内容   函数绑定一个简单的函数绑定在JavaScript与DOM交互中经常需要使用函数绑定，定义一个函数然后将其绑定到特定DOM元素或集合的某个事件触发程序上，绑定函数经常和回调函数及事件处理程序一起使用，以便把函数作为变量传递的同时保留代码执行环境。">
+<meta name="twitter:title" content="前端面试系列（二）：面试常问的几个HTML5特性">
+<meta name="twitter:description" content="来，有兴趣的破解个下面的摩斯电码：-.-- --- ..- -....- .- .-. . -....- .... .- -. ... --- -- . -....- . -. --- ..- --. ....    一、应用程序缓存（Application Cache）通过创建cache manifest文件来创建Web应用的离线版本使用方法：">
+<meta name="twitter:image" content="http://chenkaixin.cn/images/HTML5新特性/audio.jpg">
 
 
 
@@ -169,12 +173,12 @@
 
 
 
-  <link rel="canonical" href="http://chenkaixin.cn/函数绑定和函数柯里化.html"/>
+  <link rel="canonical" href="http://chenkaixin.cn/new features of html5.html"/>
 
 
 <title>一天一颗蛋的开心</title>
 
-  <title>函数绑定和函数柯里化 | 一天一颗蛋的开心</title>
+  <title>前端面试系列（二）：面试常问的几个HTML5特性 | 一天一颗蛋的开心</title>
   
 
 
@@ -381,7 +385,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://chenkaixin.cn/函数绑定和函数柯里化.html">
+    <link itemprop="mainEntityOfPage" href="http://chenkaixin.cn/new features of html5.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kayson0512">
@@ -398,7 +402,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">函数绑定和函数柯里化</h1>
+          <h1 class="post-title" itemprop="name headline">前端面试系列（二）：面试常问的几个HTML5特性</h1>
         
 
         <div class="post-meta">
@@ -410,8 +414,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T15:45:28+08:00">
-                2017-08-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-09T09:57:28+08:00">
+                2017-08-09
               </time>
             
 
@@ -433,8 +437,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JS高级程序设计/" itemprop="url" rel="index">
-                    <span itemprop="name">JS高级程序设计</span>
+                  <a href="/categories/前端面试/" itemprop="url" rel="index">
+                    <span itemprop="name">前端面试</span>
                   </a>
                 </span>
 
@@ -450,7 +454,7 @@
 
           
           
-             <span id="/函数绑定和函数柯里化.html" class="leancloud_visitors" data-flag-title="函数绑定和函数柯里化">
+             <span id="/new features of html5.html" class="leancloud_visitors" data-flag-title="前端面试系列（二）：面试常问的几个HTML5特性">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -475,7 +479,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,207
+                  3,623
                 </span>
               
 
@@ -491,7 +495,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  5
+                  13
                 </span>
               
             </div>
@@ -512,22 +516,88 @@
       
 
       
-        <p>本篇文章大量参考JavaScript高级程序设计第三版中js高级编程的内容  </p>
-<h2 id="函数绑定"><a href="#函数绑定" class="headerlink" title="函数绑定"></a>函数绑定</h2><h3 id="一个简单的函数绑定"><a href="#一个简单的函数绑定" class="headerlink" title="一个简单的函数绑定"></a>一个简单的函数绑定</h3><p>在JavaScript与DOM交互中经常需要使用函数绑定，定义一个函数然后将其绑定到特定DOM元素或集合的某个事件触发程序上，绑定函数经常和回调函数及事件处理程序一起使用，以便把函数作为变量传递的同时保留代码执行环境。<br><a id="more"></a><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"btnTest"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"Button"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined">            </span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> handler=&#123;</span></div><div class="line"><span class="javascript">            message:<span class="string">"Event handled."</span>,</span></div><div class="line"><span class="javascript">            handlerFun:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="javascript">                alert(<span class="keyword">this</span>.message);</span></div><div class="line"><span class="undefined">            &#125;</span></div><div class="line"><span class="undefined">        &#125;;     </span></div><div class="line"><span class="javascript">        <span class="built_in">document</span>.getElementById(<span class="string">'btnTest'</span>).onclick=handler.handlerFun;</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>上面的例子创建了一个handler对象，handler.handlerFun()方法被分配为DOM按钮的click事件处理程序。设计意图是这样的：当点击按钮的时候触发该方法，弹出对话框显示handler定义的message，然而点击后对话框内容却是undefined。熟悉闭包的同学可以轻松看出来这个问题在于没有保存handler.handlerFun()方法的执行环境，this对象最后指向了DOM按钮而非handler。可以使用闭包解决此问题，修改函数绑定语句<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'btnTest'</span>).onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  handler.handlerFun();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这样就可以得到预期的结果，这个解决方案在onclick程序内部使用一个闭包直接调用handler.handlerFun()方法，当然这是特定于此场景的解决方案，创建多个闭包可能会令代码难以理解和调试。  </p>
-<h3 id="自定义bind函数"><a href="#自定义bind函数" class="headerlink" title="自定义bind函数"></a>自定义bind函数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">bind</span>(<span class="params">fn,context</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> fn.apply(context,<span class="built_in">arguments</span>);</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'btnTest'</span>).onclick=bind(handler.handlerFun,handler);</div></pre></td></tr></table></figure>
-<p>通过自定义的bind函数可以将函数绑定到指定环境，bind()函数接收两个参数：一个绑定函数，一个执行环境，并返回一个在执行环境中调用绑定函数的函数。看起来很简单，但是其功能很强大，在bing()中创建了一个闭包，闭包使用apply()调用传入的函数，并给apply()传入执行环境和参数，这里的arguments是内部匿名函数的，而非bind()的。当调用返回的函数时，它会在给定的函数中执行被传入的函数，并给出所有参数。上面例子的调用handler.handlerFun依旧可以得到参数event，因为所有参数在都通过绑定的函数传递给它了。<br>在ES6中，直接为所有函数定义了一个原生的bind()函数<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"btnTest"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"Button"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined">            </span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> handler=&#123;</span></div><div class="line"><span class="javascript">            message:<span class="string">"Event handled."</span>,</span></div><div class="line"><span class="javascript">            handlerFun:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="javascript">                alert(<span class="keyword">this</span>.message);</span></div><div class="line"><span class="undefined">            &#125;</span></div><div class="line"><span class="undefined">        &#125;;     </span></div><div class="line"><span class="javascript">        <span class="built_in">document</span>.getElementById(<span class="string">'btnTest'</span>).onclick=handler.handlerFun.bind(handler);</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h2 id="函数柯里化"><a href="#函数柯里化" class="headerlink" title="函数柯里化"></a>函数柯里化</h2><p>百科的解释：</p>
-<blockquote>
-<p>在计算机科学中，柯里化（英语：Currying），又译为卡瑞化或加里化，是把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。这个技术由 Christopher Strachey 以逻辑学家哈斯凯尔·加里命名的，尽管它是 Moses Schönfinkel 和 Gottlob Frege 发明的。  </p>
-</blockquote>
-<h3 id="最常见的实现"><a href="#最常见的实现" class="headerlink" title="最常见的实现"></a>最常见的实现</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">curry</span>(<span class="params">fn</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> args = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>,<span class="number">1</span>);</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> innerArgs = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</div><div class="line">      <span class="keyword">var</span> finalArgs = args.concat(innerArgs);</div><div class="line">      <span class="keyword">return</span> fn.apply(<span class="literal">null</span>,finalArgs);</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="最常见的应用"><a href="#最常见的应用" class="headerlink" title="最常见的应用"></a>最常见的应用</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">square</span>(<span class="params">i</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> i * i;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">dubble</span>(<span class="params">i</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> i *= <span class="number">2</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">map</span>(<span class="params">handeler, list</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> list.map(handeler);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 数组的每一项平方</span></div><div class="line">map(square, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]);</div><div class="line">map(square, [<span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]);</div><div class="line">map(square, [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>]);</div><div class="line"><span class="comment">// ......</span></div><div class="line"></div><div class="line"><span class="comment">// 数组的每一项加倍</span></div><div class="line">map(dubble, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]);</div><div class="line">map(dubble, [<span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]);</div><div class="line">map(dubble, [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>]);</div></pre></td></tr></table></figure>
-<p>例子中，创建了一个map通用函数，用于适应不同的应用场景。显然，通用性不用怀疑。同时，例子中重复传入了相同的处理函数：square和dubble。<br>那么我们来用柯里化改造一下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">square</span>(<span class="params">i</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> i * i;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">dubble</span>(<span class="params">i</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> i *= <span class="number">2</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">map</span>(<span class="params">handeler, list</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> list.map(handeler);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> mapSQ = curry(map, square);</div><div class="line">mapSQ([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]);</div><div class="line">mapSQ([<span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]);</div><div class="line">mapSQ([<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>]);</div><div class="line"><span class="comment">// ......</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> mapDB = curry(map, dubble);</div><div class="line">mapDB([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]);</div><div class="line">mapDB([<span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]);</div><div class="line">mapDB([<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>]);</div></pre></td></tr></table></figure></p>
-<p>我们缩小了函数的适用范围，但同时提高函数的适性。  </p>
-<h2 id="将柯里化与函数绑定进行结合"><a href="#将柯里化与函数绑定进行结合" class="headerlink" title="将柯里化与函数绑定进行结合"></a>将柯里化与函数绑定进行结合</h2><p>函数柯里化通常作为函数绑定的一部分包含在其中，构造出更为复杂的bind函数。例如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">bind</span>(<span class="params">fn, context</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> args = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>,<span class="number">2</span>);</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> innerArgs = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</div><div class="line">      <span class="keyword">var</span> finalArgs = args.concat(innerArgs);</div><div class="line">      <span class="keyword">return</span> fn.apply(context,finalArgs);</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>ES6中的bind函数也实现了柯里化，只需要在this值之后传入另一个参数即可。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"btnTest"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"Button"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined">            </span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> handler=&#123;</span></div><div class="line"><span class="javascript">            message:<span class="string">"Event handled."</span>,</span></div><div class="line"><span class="javascript">            handlerFun:<span class="function"><span class="keyword">function</span>(<span class="params">name, event</span>)</span>&#123;</span></div><div class="line"><span class="javascript">                alert(<span class="keyword">this</span>.message + <span class="string">":"</span> + name + <span class="string">":"</span> + event.type);</span></div><div class="line"><span class="undefined">            &#125;</span></div><div class="line"><span class="undefined">        &#125;;     </span></div><div class="line"><span class="javascript">        <span class="built_in">document</span>.getElementById(<span class="string">'btnTest'</span>).onclick=handler.handlerFun.bind(handler, <span class="string">"btnTest"</span>);</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></p>
+        <blockquote class="blockquote-center"><p>来，有兴趣的破解个下面的摩斯电码：<code>-.-- --- ..- -....- .- .-. . -....- .... .- -. ... --- -- . -....- . -. --- ..- --. ....</code></p>
+</blockquote>  
+<h3 id="一、应用程序缓存（Application-Cache）"><a href="#一、应用程序缓存（Application-Cache）" class="headerlink" title="一、应用程序缓存（Application Cache）"></a>一、应用程序缓存（Application Cache）</h3><p>通过创建cache manifest文件来创建Web应用的离线版本<br>使用方法：<br><a id="more"></a><br>首先在页面声明中使用App Cache：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE HTML&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">manifest</span>=<span class="string">"index.manifest"</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>然后再清单文件中写明资源，例如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">CACHE MANIFEST</div><div class="line">theme.css</div><div class="line">logo.gif</div><div class="line">main.js</div><div class="line">NETWORK:</div><div class="line">login.asp</div><div class="line">FALLBACK:</div><div class="line">/html5/ /404.html</div></pre></td></tr></table></figure></p>
+<p>代码解释：  </p>
+<ol>
+<li>首行必须是 CACHE MANIFEST。  </li>
+<li>其后，每一行列出一个需要缓存的资源文件名。  </li>
+<li>可根据需要列出在线访问的白名单。白名单中的所有资源不会被缓存，在使用时将直接在线访问。声明白名单使用 NETWORK：标识符。  </li>
+<li>如果在白名单后还要补充需要缓存的资源，可以使用 CACHE：标识符。  </li>
+<li>如果要声明某 URI 不能访问时的替补 URI，可以使用 FALLBACK：标识符。其后的每一行包含两个 URI，当第一个 URI 不可访问时，浏览器将尝试使用第二个 URI。  </li>
+<li>注释要另起一行，以 # 号开头。  </li>
+</ol>
+<p>更新缓存：<br>应用程序可以等待浏览器自动更新缓存，也可以使用 Javascript 接口手动触发更新。  </p>
+<ul>
+<li>自动更新：浏览器除了在第一次访问 Web 应用时缓存资源外，只会在 cache manifest 文件本身发生变化时更新缓存。而 cache manifest 中的资源文件发生变化并不会触发更新。  </li>
+<li>手动更新：开发者也可以使用 window.applicationCache 的接口更新缓存。方法是检测 window.applicationCache.status的值，如果是 UPDATEREADY，那么可以调用 window.applicationCache.update()更新缓存。示范代码如下。  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.applicationCache.status == <span class="built_in">window</span>.applicationCache.UPDATEREADY)</div><div class="line">｛</div><div class="line"> <span class="built_in">window</span>.applicationCache.update();</div><div class="line">｝</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>在线状态检测<br>如果 Web 应用程序仅仅是一些静态页面的组合，那么通过 cache manifest 缓存资源文件以后，就可以支持离线访问了。但是随着互联网的发展，特别是 Web2.0 概念流行以来，用户的提交的数据渐渐成为互联网的主流。那么在开发支持离线的Web应用时，就不能仅仅满足于静态页面的展现，还必需考虑如何让用户在离线状态下也可以操作数据。离线状态时，把数据存储在本地；在线以后，再把数据同步到服务器上。为了做到这一点，开发者首先必须知道浏览器是否在线。HTML5提供了两种检测是否在线的方式：navigator.online 和 online/offline 事件。  </p>
+<ul>
+<li>navigator.onLine：navigator.onLine 属性表示当前是否在线。如果为 true, 表示在线；如果为 false,表示离线。当网络状态发生变化时，navigator.onLine 的值也随之变化。开发者可以通过读取它的值获取网络状态。  </li>
+<li>online/offline 事件：当开发离线应用时，通过 navigator.onLine 获取网络状态通常是不够的。开发者还需要在网络状态发生变化时立刻得到通知，因此 HTML5还提供了 online/offline 事件。当在线 / 离线状态切换时，online/offline 事件将触发在 body 元素上，并且沿着document.body、document 和 window 的顺序冒泡。因此，开发者可以通过监听它们的 online/offline事件来获悉网络状态。<br>应用程序缓存的三个优势：</li>
+<li>离线浏览：用户可在应用离线时使用它们</li>
+<li>速度：已缓存资源加载得更快</li>
+<li>减少服务器负载：浏览器将只从服务器下载更新过或更改过的资源。  </li>
+</ul>
+<p>存在的坑（导致应用不多）</p>
+<ul>
+<li>使用了App Cache的页面在清单文件更新之后去更新页面资源，但是只在下次打开页面才能生效，这意味着，我们需要使用代码判断是不是最新版本，不是的话，刷新一次页面。这种体验很不好。</li>
+<li>使用了App Cache的页面也会被缓存，这对于需要动态更新的页面来说，几乎是个噩梦。用户访问到的页面不是最新的，会导致非常多的问题。</li>
+<li>App cache与browser cache混合在一起会使更新机制变得更加复杂，主要有以下几个因素: <ul>
+<li>App cache在各浏览器平台实现上存在差异； </li>
+<li>各浏览器又提供了不同的页面刷新机制； </li>
+<li>app cache还与传统的browser cache有着千丝万缕的联系；对于它俩如何协同工作，HTML5的相关规范没有对app cache的细节给出非常明确的规定; 浏览器官方文档有没有给出非常明确的说明。 </li>
+<li>browser cache的更新机制本身就已经很复杂。 </li>
+<li>如果manifest文件本身就有缓存时间，或设置为永远都可用，那你的网页永远都不会被更新了。  <h3 id="二、本地存储（Local-Storage）"><a href="#二、本地存储（Local-Storage）" class="headerlink" title="二、本地存储（Local Storage）"></a>二、本地存储（Local Storage）</h3>本地存储是一个window的属性，包括localStorage和sessionStorage，从名字应该可以很清楚的辨认二者的区别，前者是一直存在本地的，后者只是伴随着session，窗口一旦关闭就没了。二者用法完全相同，这里以localStorage为例。大小大概为5M。比Cookie的4KB好得多。存储数据的方法就是给window.localStorage添加一个属性，属性都是以键值对的方式存在：  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">localStorage.a = <span class="number">3</span>;<span class="comment">//设置a为"3"</span></div><div class="line">localStorage[<span class="string">"a"</span>] = <span class="string">"sfsf"</span>;<span class="comment">//设置a为"sfsf"，覆盖上面的值</span></div><div class="line">localStorage.setItem(<span class="string">"b"</span>,<span class="string">"isaac"</span>);<span class="comment">//设置b为"isaac"</span></div><div class="line"><span class="keyword">var</span> a1 = localStorage[<span class="string">"a"</span>];<span class="comment">//获取a的值</span></div><div class="line"><span class="keyword">var</span> a2 = localStorage.a;<span class="comment">//获取a的值</span></div><div class="line"><span class="keyword">var</span> b = localStorage.getItem(<span class="string">"b"</span>);<span class="comment">//获取b的值</span></div><div class="line">localStorage.removeItem(<span class="string">"c"</span>);<span class="comment">//清除c的值</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p>推荐使用getItem()和setItem()，清除键值对使用removeItem()，一次性清除所有键值对使用clear()。此外还有key()方法在不知道有哪些键值的时候进行使用。<br>Note: HTML5本地存储只能存字符串，任何格式存储的时候都会被自动转为字符串，所以读取的时候，需要自己进行类型的转换。  </p>
+<h3 id="三、文件接口（File-API）"><a href="#三、文件接口（File-API）" class="headerlink" title="三、文件接口（File API）"></a>三、文件接口（File API）</h3><p>之前我们操作一个图片文件，都是先将图片上传到服务器端，然后再使用一个img标签指向到服务器的url地址，然后再进行一个使用第三方插件进行图片处理，而现在这一切都不需要服务器端了，因为FileReader对象提供的几个读取文件的方法变得异常简单，而且全部是客户端js的操作。<br>简单的用法：HTML中定义一个src为空的img和value为空的textarea，以及一个type为file的input按钮，绑定一个点击事件readLocalFile()，然后在js中编写function readLocalFile()<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">readLocalFile</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> localFile = <span class="built_in">document</span>.getElementById(<span class="string">"uploadFile"</span>).files[<span class="number">0</span>]; <span class="comment">//取得input按钮中获取的一个本地文件的相关信息保存至变量localFile，localFile中有name、type、size等文件的属性</span></div><div class="line">  <span class="keyword">var</span> reader = <span class="keyword">new</span> FileReader();<span class="comment">//定义一个FileReader</span></div><div class="line">  <span class="keyword">var</span> content;</div><div class="line">  content = reader.readAsDataURL(localFile, <span class="string">"UTF-8"</span>);<span class="comment">//readAS…完成后会将相对应的结果保存至result属性中，例如readAsDataURL、readAsText等，随后会调用onload或者onerror事件处理程序</span></div><div class="line">  reader.onload = <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">    content = event.target.result;</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"img"</span>).src = content;</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"fileContent"</span>).value = content;</div><div class="line">  &#125;</div><div class="line">  reader.onerror = <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">    alert(<span class="string">'error'</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="四、网页多媒体特性（MULTIMEDIA）"><a href="#四、网页多媒体特性（MULTIMEDIA）" class="headerlink" title="四、网页多媒体特性（MULTIMEDIA）"></a>四、网页多媒体特性（MULTIMEDIA）</h3><p>主要是<code>&lt;audio&gt;</code>标签和<code>&lt;video&gt;</code>标签。<br><img src="../images/HTML5新特性/audio.jpg" alt="audio标签"><br><img src="../images/HTML5新特性/video.jpg" alt="video标签"><br>标签属性中src为文件的URL，preload为预加载，autoplay为自动播放，loop为循环播放，controls为加上浏览器自带的控制条，对于video还有额外的宽高的设定，width和hight，以及没有播放时显示的视频封面poster。<br>包含的常用方法有：load()重新加载，play()开始，pause()暂停<br>audio通常支持：Ogg Vorbis、MP3、Wav<br>video通常支持：Ogg、MPEG 4、WebM( 以 Matroska（就是我们熟知的 MKV）容器格式为基础开发的新容器格式，里面包括了 VP8 视频和 Ogg Vorbis 音轨)<br>具体的还要看浏览器的支持情况。<br>Note：HTML5的音频处理接口让我们可以直接操作原始的音频流数据。一段音频到达扬声器进行播放之前，半路对其进行拦截，于是我们就得到了音频数据了，这个拦截工作是由window.AudioContext来做的，我们所有对音频的操作都基于这个对象。通过AudioContext可以创建不同各类的AudioNode，即音频节点，不同节点作用不同，有的对音频加上滤镜比如提高音色(比如BiquadFilterNode)，改变单调，有的音频进行分割，比如将音源中的声道分割出来得到左右声道的声音（ChannelSplitterNode），有的对音频数据进行频谱分析。  </p>
+<h3 id="五、画布（Canvas）"><a href="#五、画布（Canvas）" class="headerlink" title="五、画布（Canvas）"></a>五、画布（Canvas）</h3><p>HTML5 的 canvas 元素使用 JavaScript 在网页上绘制图像。<br>画布是一个矩形区域，您可以控制其每一像素。<br>canvas 拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。<br>使用：<br>首先创建canvas元素：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"myCanvas"</span> <span class="attr">width</span>=<span class="string">"200"</span> <span class="attr">height</span>=<span class="string">"100"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>然后再js中进行绘制：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> c=<span class="built_in">document</span>.getElementById(<span class="string">"myCanvas"</span>);</div><div class="line"><span class="keyword">var</span> cxt=c.getContext(<span class="string">"2d"</span>);</div><div class="line">cxt.fillStyle=<span class="string">"#FF0000"</span>;</div><div class="line">cxt.fillRect(<span class="number">0</span>,<span class="number">0</span>,<span class="number">150</span>,<span class="number">75</span>);</div></pre></td></tr></table></figure></p>
+<p>Canvas 与 SVG 的比较<br>Canvas </p>
+<ul>
+<li>依赖分辨率 </li>
+<li>不支持事件处理器 </li>
+<li>弱的文本渲染能力 </li>
+<li>能够以 .png 或 .jpg 格式保存结果图像 </li>
+<li>最适合图像密集型的游戏，其中的许多对象会被频繁重绘  </li>
+</ul>
+<p>SVG </p>
+<ul>
+<li>不依赖分辨率 </li>
+<li>支持事件处理器 </li>
+<li>最适合带有大型渲染区域的应用程序（比如谷歌地图） </li>
+<li>复杂度高会减慢渲染速度（任何过度使用 DOM 的应用都不快） </li>
+<li>不适合游戏应用<h3 id="六、网页后台任务（Web-Workers）"><a href="#六、网页后台任务（Web-Workers）" class="headerlink" title="六、网页后台任务（Web Workers）"></a>六、网页后台任务（Web Workers）</h3>当在 HTML 页面中执行脚本时，页面的状态是不可响应的，直到脚本已完成。AJAX向服务器端发送请求，是异步接收响应的。不然页面会卡住。<br>Web Workers 是运行在浏览器后台的 JavaScript，独立于其他脚本，不会影响页面的性能。您可以继续做任何愿意做的事情：点击、选取内容等等，而此时 Web Workers 在后台运行。<br>Note：setInterval和setTimeout是单线程执行的。<br>在html5规范中引入了web workers概念，解决客户端JavaScript无法多线程的问题，其定义的worker是指代码的并行线程，不过web worker处于一个自包含的环境中，无法访问主线程的window对象和document对象，和主线程通信只能通过异步消息传递机制。<br>我们需要把希望单独执行的javascript代码放到一个单独的js文件中，然后在页面中调用Worker构造函数来创建一个线程，参数是该文件路径，参数存放如果是相对地址，那么要以包含调用Worker构造函数语句所在脚本为参照，如果是绝对路径，需要保证同源（协议+主机+端口）。这个文件不需要我们在页面使用script标签显示引用。<br><img src="../images/HTML5新特性/webworkers.jpg" alt="webworkers"><br>Web Worker的限制：</li>
+<li>Web Worker无法访问DOM节点；</li>
+<li>Web Worker无法访问全局变量或是全局函数；</li>
+<li>Web Worker无法调用alert()或者confirm之类的函数；</li>
+<li>Web Worker无法访问window、document之类的浏览器全局变量；</li>
+</ul>
+<p><strong><em>即Web Worker并没有改变JS单线程的本质！</em></strong><br>不过Web Worker中的Javascript依然可以使用setTimeout(),setInterval()之类的函数，也可以使用XMLHttpRequest对象来做Ajax通信。<br>七、新的AJAX（XMLHttpRequest 2）<br>XMLHttpRequest是一个浏览器接口，使得Javascript可以进行HTTP(S)通信。也就是AJAX。<br>上一代AJAX有以下缺点。</p>
+<ul>
+<li>只支持文本数据的传送，无法用来读取和上传二进制文件。</li>
+<li>传送和接收数据时，没有进度信息，只能提示有没有完成。</li>
+<li>受到”同域限制”（Same Origin Policy），只能向同一域名的服务器请求数据，不能跨域。</li>
+</ul>
+<p>XMLHttpRequest 2也就是新的AJAX。针对老版本的缺点，做出了大幅改进，有下面的特点。</p>
+<ul>
+<li>可以设置HTTP请求的时限。</li>
+<li>可以使用FormData对象管理表单数据。</li>
+<li>可以上传文件。</li>
+<li>可以请求不同域名下的数据（跨域请求）。</li>
+<li>可以获取服务器端的二进制数据。</li>
+<li>可以获得数据传输的进度信息。</li>
+</ul>
+<p>Note：主要通过判断window.FormData是否存在来判断浏览器是否支持XHR 2。<br>本节内容详解请参加系列博客：<a href="http://chenkaixin.cn/新老AJAX.html">前端面试系列（三）：新老AJAX（XHR1和XHR2）</a><br>八、新增的几个常用的语义化的标签<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">article</span>&gt;</span>定义外部的内容。比如来自一个外部的新闻提供者的一篇新的文章，或者来自 blog 的文本，或者是来自论坛的文本。亦或是来自其他外部源内容。</div><div class="line"><span class="tag">&lt;<span class="name">aside</span>&gt;</span>定义 article 以外的内容。aside 的内容应该与 article 的内容相关。</div><div class="line"><span class="tag">&lt;<span class="name">audio</span>&gt;</span><span class="tag">&lt;<span class="name">video</span>&gt;</span><span class="tag">&lt;<span class="name">canvas</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">command</span>&gt;</span> 定义命令按钮，比如单选按钮、复选框或按钮。</div><div class="line"><span class="tag">&lt;<span class="name">datalist</span>&gt;</span> 定义可选数据的列表。与 input 元素配合使用，就可以制作出输入值的下拉列表。</div><div class="line"><span class="tag">&lt;<span class="name">details</span>&gt;</span> 定义元素的细节，用户可进行查看，或通过点击进行隐藏。与 <span class="tag">&lt;<span class="name">legend</span>&gt;</span>一起使用，来制作 detail 的标题。该标题对用户是可见的，当在其上点击时可打开或关闭 detail。</div><div class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span> 定义 section 或 document 的页脚。典型地，它会包含创作者的姓名、文档的创作日期以及/或者联系信息。</div><div class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span> 定义 section 或 document 的页眉。</div><div class="line"><span class="tag">&lt;<span class="name">mark</span>&gt;</span>主要用来在视觉上向用户呈现那些需要突出的文字。<span class="tag">&lt;<span class="name">mark</span>&gt;</span>标签的一个比较典型的应用就是在搜索结果中向用户高亮显示搜索关键词。</div><div class="line"><span class="tag">&lt;<span class="name">nav</span>&gt;</span> 定义导航链接的部分。</div><div class="line"><span class="tag">&lt;<span class="name">output</span>&gt;</span> 定义不同类型的输出，比如脚本的输出。</div><div class="line"><span class="tag">&lt;<span class="name">progress</span>&gt;</span> 运行中的进程。可以使用 <span class="tag">&lt;<span class="name">progress</span>&gt;</span> 标签来显示 JavaScript 中耗费时间的函数的进程。</div><div class="line">举例：<span class="tag">&lt;<span class="name">progress</span> <span class="attr">value</span>=<span class="string">"22"</span> <span class="attr">max</span>=<span class="string">"100"</span>&gt;</span><span class="tag">&lt;/<span class="name">progress</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">section</span>&gt;</span> 定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分。</div><div class="line"><span class="tag">&lt;<span class="name">source</span>&gt;</span> 为媒介元素（比如 <span class="tag">&lt;<span class="name">video</span>&gt;</span> 和 <span class="tag">&lt;<span class="name">audio</span>&gt;</span>）定义媒介资源。</div><div class="line"><span class="tag">&lt;<span class="name">summary</span>&gt;</span> 包含 details 元素的标题，”details” 元素用于描述有关文档或文档片段的详细信息。”summary” 元素应该是 “details” 元素的第一个子元素。</div><div class="line"><span class="tag">&lt;<span class="name">time</span>&gt;</span> 定义日期或时间，或者两者。</div><div class="line">举例：直接使用<span class="tag">&lt;<span class="name">time</span>&gt;</span>9:00<span class="tag">&lt;/<span class="name">time</span>&gt;</span>或者<span class="tag">&lt;<span class="name">time</span> <span class="attr">datetime</span>=<span class="string">"2010-02-14"</span>&gt;</span>情人节<span class="tag">&lt;/<span class="name">time</span>&gt;</span></div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -554,12 +624,12 @@
   <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
-  <p><span>本文标题:</span><a href="/函数绑定和函数柯里化.html">函数绑定和函数柯里化</a></p>
+  <p><span>本文标题:</span><a href="/new features of html5.html">前端面试系列（二）：面试常问的几个HTML5特性</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Kayson0512 的个人博客">Kayson0512</a></p>
-  <p><span>发布时间:</span>2017年08月10日 - 15:08</p>
-  <p><span>最后更新:</span>2017年08月11日 - 10:08</p>
-  <p><span>原始链接:</span><a href="/函数绑定和函数柯里化.html" title="函数绑定和函数柯里化">http://chenkaixin.cn/函数绑定和函数柯里化.html</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://chenkaixin.cn/函数绑定和函数柯里化.html"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2017年08月09日 - 09:08</p>
+  <p><span>最后更新:</span>2017年08月09日 - 11:08</p>
+  <p><span>原始链接:</span><a href="/new features of html5.html" title="前端面试系列（二）：面试常问的几个HTML5特性">http://chenkaixin.cn/new features of html5.html</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://chenkaixin.cn/new features of html5.html"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
 </div>
@@ -628,9 +698,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/函数绑定/" rel="tag"><i class="fa fa-tag"></i> 函数绑定</a>
+            <a href="/tags/计算机网络基础/" rel="tag"><i class="fa fa-tag"></i> 计算机网络基础</a>
           
-            <a href="/tags/函数柯里化/" rel="tag"><i class="fa fa-tag"></i> 函数柯里化</a>
+            <a href="/tags/HTML5/" rel="tag"><i class="fa fa-tag"></i> HTML5</a>
           
         </div>
       
@@ -643,8 +713,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/浏览器跨域访问的实现.html" rel="next" title="前端面试系列（四）：浏览器跨域访问的实现">
-                <i class="fa fa-chevron-left"></i> 前端面试系列（四）：浏览器跨域访问的实现
+              <a href="/SEO.html" rel="next" title="前端面试系列（一）：网站优化的解决方案">
+                <i class="fa fa-chevron-left"></i> 前端面试系列（一）：网站优化的解决方案
               </a>
             
           </div>
@@ -653,8 +723,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/绝对定位和相对定位.html" rel="prev" title="绝对定位和相对定位">
-                绝对定位和相对定位 <i class="fa fa-chevron-right"></i>
+              <a href="/ajax.html" rel="prev" title="前端面试系列（三）：新老AJAX（XHR1和XHR2）">
+                前端面试系列（三）：新老AJAX（XHR1和XHR2） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -869,7 +939,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数绑定"><span class="nav-number">1.</span> <span class="nav-text">函数绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一个简单的函数绑定"><span class="nav-number">1.1.</span> <span class="nav-text">一个简单的函数绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义bind函数"><span class="nav-number">1.2.</span> <span class="nav-text">自定义bind函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数柯里化"><span class="nav-number">2.</span> <span class="nav-text">函数柯里化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#最常见的实现"><span class="nav-number">2.1.</span> <span class="nav-text">最常见的实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最常见的应用"><span class="nav-number">2.2.</span> <span class="nav-text">最常见的应用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将柯里化与函数绑定进行结合"><span class="nav-number">3.</span> <span class="nav-text">将柯里化与函数绑定进行结合</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、应用程序缓存（Application-Cache）"><span class="nav-number">1.</span> <span class="nav-text">一、应用程序缓存（Application Cache）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、本地存储（Local-Storage）"><span class="nav-number">2.</span> <span class="nav-text">二、本地存储（Local Storage）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、文件接口（File-API）"><span class="nav-number">3.</span> <span class="nav-text">三、文件接口（File API）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、网页多媒体特性（MULTIMEDIA）"><span class="nav-number">4.</span> <span class="nav-text">四、网页多媒体特性（MULTIMEDIA）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、画布（Canvas）"><span class="nav-number">5.</span> <span class="nav-text">五、画布（Canvas）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、网页后台任务（Web-Workers）"><span class="nav-number">6.</span> <span class="nav-text">六、网页后台任务（Web Workers）</span></a></li></ol></div>
             
 
           </div>

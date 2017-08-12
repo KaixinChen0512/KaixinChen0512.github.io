@@ -111,7 +111,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="计算机网络基础,AJAX,XHR," />
+  <meta name="keywords" content="JS高级程序设计" />
 
 
 
@@ -129,18 +129,18 @@
 
 
 
-<meta name="description" content="来来来，再来一个：-.-- --- ..- -....- .- .-. . -....- ... --- -....- -... . .- ..- - .. ..-. ..- .-..    老AJAX工作原理通过XmlHttpRequest对象来向服务器发异步请求，从服务器获得数据，然后用javascript来操作DOM而更新页面。">
-<meta name="keywords" content="计算机网络基础,AJAX,XHR">
+<meta name="description" content="本篇文章大量参考JavaScript高级程序设计第三版中js高级编程的内容   函数绑定一个简单的函数绑定在JavaScript与DOM交互中经常需要使用函数绑定，定义一个函数然后将其绑定到特定DOM元素或集合的某个事件触发程序上，绑定函数经常和回调函数及事件处理程序一起使用，以便把函数作为变量传递的同时保留代码执行环境。">
+<meta name="keywords" content="JS高级程序设计">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端面试系列（三）：新老AJAX（XHR1和XHR2）">
-<meta property="og:url" content="http://chenkaixin.cn/新老AJAX.html">
+<meta property="og:title" content="函数绑定和函数柯里化">
+<meta property="og:url" content="http://chenkaixin.cn/bind and curry.html">
 <meta property="og:site_name" content="一天一颗蛋的开心">
-<meta property="og:description" content="来来来，再来一个：-.-- --- ..- -....- .- .-. . -....- ... --- -....- -... . .- ..- - .. ..-. ..- .-..    老AJAX工作原理通过XmlHttpRequest对象来向服务器发异步请求，从服务器获得数据，然后用javascript来操作DOM而更新页面。">
+<meta property="og:description" content="本篇文章大量参考JavaScript高级程序设计第三版中js高级编程的内容   函数绑定一个简单的函数绑定在JavaScript与DOM交互中经常需要使用函数绑定，定义一个函数然后将其绑定到特定DOM元素或集合的某个事件触发程序上，绑定函数经常和回调函数及事件处理程序一起使用，以便把函数作为变量传递的同时保留代码执行环境。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-09T03:08:50.062Z">
+<meta property="og:updated_time" content="2017-08-11T02:01:27.827Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端面试系列（三）：新老AJAX（XHR1和XHR2）">
-<meta name="twitter:description" content="来来来，再来一个：-.-- --- ..- -....- .- .-. . -....- ... --- -....- -... . .- ..- - .. ..-. ..- .-..    老AJAX工作原理通过XmlHttpRequest对象来向服务器发异步请求，从服务器获得数据，然后用javascript来操作DOM而更新页面。">
+<meta name="twitter:title" content="函数绑定和函数柯里化">
+<meta name="twitter:description" content="本篇文章大量参考JavaScript高级程序设计第三版中js高级编程的内容   函数绑定一个简单的函数绑定在JavaScript与DOM交互中经常需要使用函数绑定，定义一个函数然后将其绑定到特定DOM元素或集合的某个事件触发程序上，绑定函数经常和回调函数及事件处理程序一起使用，以便把函数作为变量传递的同时保留代码执行环境。">
 
 
 
@@ -169,12 +169,12 @@
 
 
 
-  <link rel="canonical" href="http://chenkaixin.cn/新老AJAX.html"/>
+  <link rel="canonical" href="http://chenkaixin.cn/bind and curry.html"/>
 
 
 <title>一天一颗蛋的开心</title>
 
-  <title>前端面试系列（三）：新老AJAX（XHR1和XHR2） | 一天一颗蛋的开心</title>
+  <title>函数绑定和函数柯里化 | 一天一颗蛋的开心</title>
   
 
 
@@ -381,7 +381,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://chenkaixin.cn/新老AJAX.html">
+    <link itemprop="mainEntityOfPage" href="http://chenkaixin.cn/bind and curry.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kayson0512">
@@ -398,7 +398,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">前端面试系列（三）：新老AJAX（XHR1和XHR2）</h1>
+          <h1 class="post-title" itemprop="name headline">函数绑定和函数柯里化</h1>
         
 
         <div class="post-meta">
@@ -410,8 +410,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-09T10:47:50+08:00">
-                2017-08-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T15:45:28+08:00">
+                2017-08-10
               </time>
             
 
@@ -433,8 +433,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端面试/" itemprop="url" rel="index">
-                    <span itemprop="name">前端面试</span>
+                  <a href="/categories/JS高级程序设计/" itemprop="url" rel="index">
+                    <span itemprop="name">JS高级程序设计</span>
                   </a>
                 </span>
 
@@ -450,7 +450,7 @@
 
           
           
-             <span id="/新老AJAX.html" class="leancloud_visitors" data-flag-title="前端面试系列（三）：新老AJAX（XHR1和XHR2）">
+             <span id="/bind and curry.html" class="leancloud_visitors" data-flag-title="函数绑定和函数柯里化">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -475,7 +475,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,888
+                  1,207
                 </span>
               
 
@@ -491,7 +491,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  7
+                  5
                 </span>
               
             </div>
@@ -512,76 +512,22 @@
       
 
       
-        <blockquote class="blockquote-center"><p>来来来，再来一个：<code>-.-- --- ..- -....- .- .-. . -....- ... --- -....- -... . .- ..- - .. ..-. ..- .-..</code></p>
-</blockquote>  
-<h3 id="老AJAX工作原理"><a href="#老AJAX工作原理" class="headerlink" title="老AJAX工作原理"></a>老AJAX工作原理</h3><p>通过XmlHttpRequest对象来向服务器发异步请求，从服务器获得数据，然后用javascript来操作DOM而更新页面。<br><a id="more"></a><br>优点</p>
-<ul>
-<li>页面无刷新，在页面内与服务器通信，用户体验非常好。</li>
-<li>使用异步方式与服务器通信，不需要打断用户的操作，具有更加迅速的响应能力。</li>
-<li>可以把以前一些服务器负担的工作转嫁到客户端，利用客户端闲置的能力来处理，减轻服务器和带宽的负担，节约空间和宽带租用成本。并且减轻服务器的负担，AJAX的原则是“按需取数据”，可以最大程度的减少冗余请求，和响应对服务器造成的负担。</li>
-<li>基于标准化的并被广泛支持的技术，不需要下载插件或者小程序。</li>
-</ul>
-<p>缺点</p>
-<ul>
-<li>AJAX干掉了back按钮，即对浏览器后退机制的破坏。后退按钮是一个标准的web站点的重要功能，但是它没法和js进行很好的合作。</li>
-<li>安全问题。技术同时也对IT企业带来了新的安全威胁，AJAX技术就如同对企业数据建立了一个直接通道。这使得开发者在不经意间会暴露比以前更多的数据和服务器逻辑。AJAX的逻辑可以对客户端的安全扫描技术隐藏起来，允许黑客从远端服务器上建立新的攻击。还有AJAX也难以避免一些已知的安全弱点，诸如跨站点脚步攻击、SQL注入攻击和基于credentials的安全漏洞等。</li>
-<li>对搜索引擎的支持比较弱。</li>
-</ul>
-<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>1、在js当中创建一个XHR（其中涉及兼容性处理）<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> xhr = <span class="literal">null</span>;</div><div class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.XMLHttpRequest) &#123;</div><div class="line">    <span class="comment">//所有现代浏览器(IE7+.Firefox.Chrome.Safari以及opera)</span></div><div class="line">    xhr = <span class="keyword">new</span> XMLHttpRequest;</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">    <span class="comment">//老版本的Internet Explorer使用ActiveX对象</span></div><div class="line">    xhr = <span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHttp"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>2.配置请求对象的信息<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">xhr.open(<span class="string">'GET/POST'</span>,<span class="string">'url地址'</span>,[<span class="string">'是否异步'</span>]);</div><div class="line">注意：如果使用post请求,就一定要设置请求头</div><div class="line">xhr.setRequestHeader(<span class="string">"Content-Type"</span>,<span class="string">"application/x-www-form-urlencoded;charset=gb2312"</span>);</div></pre></td></tr></table></figure></p>
-<p>3.发送请求<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xhr.send([post请求参数字符串]);</div></pre></td></tr></table></figure></p>
-<p>发送请求分为两种情况:</p>
-<ul>
-<li>监控用户的事件(onclick,onchange等),通过ajax发送请求</li>
-<li>监控浏览器的事件(onload),通过ajax发送请求.</li>
-</ul>
-<p>4.监听Ajax引擎对象的改变(是否正确做出了响应)<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">xmlHttpRequest.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span> (xmlHttpRequest.readyState== <span class="number">4</span> &amp;&amp; xmlHttpRequest==<span class="number">200</span>) &#123;</div><div class="line">            <span class="comment">//xmlHttpRequest.responseText</span></div><div class="line">            <span class="comment">//xmlHttpRequest.responseText</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h4 id="知识拓展"><a href="#知识拓展" class="headerlink" title="知识拓展"></a>知识拓展</h4><p>详解onreadystatechange<br>onreadystatechange属性是一个方法,监控到响应内容的返回,根据响应内容使用javascript改变当前页面的部分html代码,从而达到不刷新改变局部html代码.当Ajax引擎的状态发生改变时都会执行onreadystatechange属性对应的方法。<br>详解Ajax引擎的状态属性<br><code>readyState(0 1 2 3 4)</code></p>
-<ul>
-<li>0.请求未初始化</li>
-<li>1.服务器连接已建立</li>
-<li>2.请求已接收</li>
-<li>3.请求处理中</li>
-<li>4.请求已完成,并且响应已就绪</li>
-</ul>
-<p>当Ajax引擎的状态属性为readyState为4时,说明服务器的响应已经发送给Ajax请求了.但是响应的状态吗为200时:说明响应的内容是正确的,这时才会根据相应内容对当前页面的html处理  </p>
-<h3 id="老版本的缺点"><a href="#老版本的缺点" class="headerlink" title="老版本的缺点"></a>老版本的缺点</h3><ul>
-<li>只支持文本数据的传送，无法用来读取和上传二进制文件。</li>
-<li>传送和接收数据时，没有进度信息，只能提示有没有完成。</li>
-<li>受到”同域限制”（Same Origin Policy），只能向同一域名的服务器请求数据。</li>
-</ul>
-<h3 id="新版本的功能"><a href="#新版本的功能" class="headerlink" title="新版本的功能"></a>新版本的功能</h3><ul>
-<li>可以设置HTTP请求的时限。</li>
-<li>可以使用FormData对象管理表单数据。</li>
-<li>可以上传文件。</li>
-<li>可以请求不同域名下的数据（跨域请求）。</li>
-<li>可以获取服务器端的二进制数据。</li>
-<li>可以获得数据传输的进度信息。</li>
-</ul>
-<p>下面，我就简单介绍这些新功能。  </p>
-<h4 id="HTTP请求的时限"><a href="#HTTP请求的时限" class="headerlink" title="HTTP请求的时限"></a>HTTP请求的时限</h4><p>有时，ajax操作很耗时，而且无法预知要花多少时间。如果网速很慢，用户可能要等很久。新版本的XMLHttpRequest对象，增加了timeout属性，可以设置HTTP请求的时限。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xhr.timeout = <span class="number">3000</span>;</div></pre></td></tr></table></figure></p>
-<p>上面的语句，将最长等待时间设为3000毫秒。过了这个时限，就自动停止HTTP请求。与之配套的还有一个timeout事件，用来指定回调函数。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">xhr.ontimeout = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">　　alert(<span class="string">'请求超时！'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>目前，Opera、Firefox和IE 10支持该属性，IE 8和IE 9的这个属性属于XDomainRequest对象，而Chrome和Safari还不支持。  </p>
-<h4 id="FormData对象"><a href="#FormData对象" class="headerlink" title="FormData对象"></a>FormData对象</h4><p>ajax操作往往用来传递表单数据。为了方便表单处理，HTML 5新增了一个formData对象，可以模拟表单。<br>首先，新建一个FormData对象。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> formData = <span class="keyword">new</span> FormData();</div></pre></td></tr></table></figure></p>
-<p>然后，为它添加表单项。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">formData.append(<span class="string">'username'</span>, <span class="string">'张三'</span>);</div><div class="line">formData.append(<span class="string">'id'</span>, <span class="number">123456</span>);</div></pre></td></tr></table></figure></p>
-<p>最后，直接传送这个FormData对象。这与提交网页表单的效果，完全一样。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xhr.send(formData);</div></pre></td></tr></table></figure></p>
-<p>FormData对象也可以用来获取网页表单的值。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> form = <span class="built_in">document</span>.getElementById(<span class="string">'myform'</span>);</div><div class="line"><span class="keyword">var</span> formData = <span class="keyword">new</span> FormData(form);</div><div class="line">formData.append(<span class="string">'secret'</span>, <span class="string">'123456'</span>); <span class="comment">// 添加一个表单项</span></div><div class="line">xhr.open(<span class="string">'POST'</span>, form.action);</div><div class="line">xhr.send(formData);</div></pre></td></tr></table></figure></p>
-<h4 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h4><p>新版XMLHttpRequest对象，不仅可以发送文本信息，还可以上传文件。<br>假定files是一个”选择文件”的表单元素<code>input[type=&quot;file&quot;]</code>，我们将它装入FormData对象。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> formData = <span class="keyword">new</span> FormData();</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; files.length;i++) &#123;</div><div class="line">　　formData.append(<span class="string">'files[]'</span>, files[i]);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>然后，发送这个FormData对象。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xhr.send(formData);</div></pre></td></tr></table></figure></p>
-<h4 id="接收二进制数据（responseType属性）"><a href="#接收二进制数据（responseType属性）" class="headerlink" title="接收二进制数据（responseType属性）"></a>接收二进制数据（responseType属性）</h4><p>从服务器取回二进制数据，较新的方法是使用新增的responseType属性。如果服务器返回文本数据，这个属性的值是”TEXT”，这是默认值。较新的浏览器还支持其他值，也就是说，可以接收其他格式的数据。<br>你可以把responseType设为blob，表示服务器传回的是二进制对象。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">xhr.open(<span class="string">'GET'</span>, <span class="string">'/path/to/image.png'</span>);</div><div class="line">xhr.responseType = <span class="string">'blob'</span>;</div></pre></td></tr></table></figure></p>
-<p>接收数据的时候，用浏览器自带的Blob对象即可。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> blob = <span class="keyword">new</span> Blob([xhr.response], &#123;<span class="attr">type</span>: <span class="string">'image/png'</span>&#125;);</div></pre></td></tr></table></figure></p>
-<p>注意，是读取xhr.response，而不是xhr.responseText。<br>你还可以将responseType设为arraybuffer，把二进制数据装在一个数组里。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">xhr.open(<span class="string">'GET'</span>, <span class="string">'/path/to/image.png'</span>);</div><div class="line">xhr.responseType = <span class="string">"arraybuffer"</span>;</div></pre></td></tr></table></figure></p>
-<p>接收数据的时候，需要遍历这个数组。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arrayBuffer = xhr.response;</div><div class="line"><span class="keyword">if</span> (arrayBuffer) &#123;</div><div class="line">　　<span class="keyword">var</span> byteArray = <span class="keyword">new</span> <span class="built_in">Uint8Array</span>(arrayBuffer);</div><div class="line">　　<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; byteArray.byteLength; i++) &#123;</div><div class="line">　　　　<span class="comment">// do something</span></div><div class="line">　　&#125;&#125;</div></pre></td></tr></table></figure></p>
-<h4 id="进度信息"><a href="#进度信息" class="headerlink" title="进度信息"></a>进度信息</h4><p>新版本的XMLHttpRequest对象，传送数据的时候，有一个progress事件，用来返回进度信息。<br>它分成上传和下载两种情况。下载的progress事件属于XMLHttpRequest对象，上传的progress事件属于XMLHttpRequest.upload对象。<br>我们先定义progress事件的回调函数。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xhr.onprogress = updateProgress;</div><div class="line">xhr.upload.onprogress = updateProgress;</div></pre></td></tr></table></figure></p>
-<p>然后，在回调函数里面，使用这个事件的一些属性。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">updateProgress</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">　　<span class="keyword">if</span> (event.lengthComputable) &#123;</div><div class="line">　　　　<span class="keyword">var</span> percentComplete = event.loaded / event.total;</div><div class="line">　　&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>上面的代码中，event.total是需要传输的总字节，event.loaded是已经传输的字节。如果event.lengthComputable不为真，则event.total等于0。与progress事件相关的，还有其他五个事件，可以分别指定回调函数：  </p>
-<ul>
-<li>load事件：传输成功完成。</li>
-<li>abort事件：传输被用户取消。</li>
-<li>error事件：传输中出现错误。</li>
-<li>loadstart事件：传输开始。</li>
-<li>loadEnd事件：传输结束，但是不知道成功还是失败。</li>
-</ul>
+        <p>本篇文章大量参考JavaScript高级程序设计第三版中js高级编程的内容  </p>
+<h2 id="函数绑定"><a href="#函数绑定" class="headerlink" title="函数绑定"></a>函数绑定</h2><h3 id="一个简单的函数绑定"><a href="#一个简单的函数绑定" class="headerlink" title="一个简单的函数绑定"></a>一个简单的函数绑定</h3><p>在JavaScript与DOM交互中经常需要使用函数绑定，定义一个函数然后将其绑定到特定DOM元素或集合的某个事件触发程序上，绑定函数经常和回调函数及事件处理程序一起使用，以便把函数作为变量传递的同时保留代码执行环境。<br><a id="more"></a><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"btnTest"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"Button"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined">            </span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> handler=&#123;</span></div><div class="line"><span class="javascript">            message:<span class="string">"Event handled."</span>,</span></div><div class="line"><span class="javascript">            handlerFun:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="javascript">                alert(<span class="keyword">this</span>.message);</span></div><div class="line"><span class="undefined">            &#125;</span></div><div class="line"><span class="undefined">        &#125;;     </span></div><div class="line"><span class="javascript">        <span class="built_in">document</span>.getElementById(<span class="string">'btnTest'</span>).onclick=handler.handlerFun;</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>上面的例子创建了一个handler对象，handler.handlerFun()方法被分配为DOM按钮的click事件处理程序。设计意图是这样的：当点击按钮的时候触发该方法，弹出对话框显示handler定义的message，然而点击后对话框内容却是undefined。熟悉闭包的同学可以轻松看出来这个问题在于没有保存handler.handlerFun()方法的执行环境，this对象最后指向了DOM按钮而非handler。可以使用闭包解决此问题，修改函数绑定语句<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'btnTest'</span>).onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  handler.handlerFun();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这样就可以得到预期的结果，这个解决方案在onclick程序内部使用一个闭包直接调用handler.handlerFun()方法，当然这是特定于此场景的解决方案，创建多个闭包可能会令代码难以理解和调试。  </p>
+<h3 id="自定义bind函数"><a href="#自定义bind函数" class="headerlink" title="自定义bind函数"></a>自定义bind函数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">bind</span>(<span class="params">fn,context</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> fn.apply(context,<span class="built_in">arguments</span>);</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'btnTest'</span>).onclick=bind(handler.handlerFun,handler);</div></pre></td></tr></table></figure>
+<p>通过自定义的bind函数可以将函数绑定到指定环境，bind()函数接收两个参数：一个绑定函数，一个执行环境，并返回一个在执行环境中调用绑定函数的函数。看起来很简单，但是其功能很强大，在bing()中创建了一个闭包，闭包使用apply()调用传入的函数，并给apply()传入执行环境和参数，这里的arguments是内部匿名函数的，而非bind()的。当调用返回的函数时，它会在给定的函数中执行被传入的函数，并给出所有参数。上面例子的调用handler.handlerFun依旧可以得到参数event，因为所有参数在都通过绑定的函数传递给它了。<br>在ES6中，直接为所有函数定义了一个原生的bind()函数<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"btnTest"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"Button"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined">            </span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> handler=&#123;</span></div><div class="line"><span class="javascript">            message:<span class="string">"Event handled."</span>,</span></div><div class="line"><span class="javascript">            handlerFun:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="javascript">                alert(<span class="keyword">this</span>.message);</span></div><div class="line"><span class="undefined">            &#125;</span></div><div class="line"><span class="undefined">        &#125;;     </span></div><div class="line"><span class="javascript">        <span class="built_in">document</span>.getElementById(<span class="string">'btnTest'</span>).onclick=handler.handlerFun.bind(handler);</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="函数柯里化"><a href="#函数柯里化" class="headerlink" title="函数柯里化"></a>函数柯里化</h2><p>百科的解释：</p>
+<blockquote>
+<p>在计算机科学中，柯里化（英语：Currying），又译为卡瑞化或加里化，是把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。这个技术由 Christopher Strachey 以逻辑学家哈斯凯尔·加里命名的，尽管它是 Moses Schönfinkel 和 Gottlob Frege 发明的。  </p>
+</blockquote>
+<h3 id="最常见的实现"><a href="#最常见的实现" class="headerlink" title="最常见的实现"></a>最常见的实现</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">curry</span>(<span class="params">fn</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> args = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>,<span class="number">1</span>);</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> innerArgs = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</div><div class="line">      <span class="keyword">var</span> finalArgs = args.concat(innerArgs);</div><div class="line">      <span class="keyword">return</span> fn.apply(<span class="literal">null</span>,finalArgs);</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="最常见的应用"><a href="#最常见的应用" class="headerlink" title="最常见的应用"></a>最常见的应用</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">square</span>(<span class="params">i</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> i * i;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">dubble</span>(<span class="params">i</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> i *= <span class="number">2</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">map</span>(<span class="params">handeler, list</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> list.map(handeler);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 数组的每一项平方</span></div><div class="line">map(square, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]);</div><div class="line">map(square, [<span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]);</div><div class="line">map(square, [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>]);</div><div class="line"><span class="comment">// ......</span></div><div class="line"></div><div class="line"><span class="comment">// 数组的每一项加倍</span></div><div class="line">map(dubble, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]);</div><div class="line">map(dubble, [<span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]);</div><div class="line">map(dubble, [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>]);</div></pre></td></tr></table></figure>
+<p>例子中，创建了一个map通用函数，用于适应不同的应用场景。显然，通用性不用怀疑。同时，例子中重复传入了相同的处理函数：square和dubble。<br>那么我们来用柯里化改造一下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">square</span>(<span class="params">i</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> i * i;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">dubble</span>(<span class="params">i</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> i *= <span class="number">2</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">map</span>(<span class="params">handeler, list</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> list.map(handeler);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> mapSQ = curry(map, square);</div><div class="line">mapSQ([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]);</div><div class="line">mapSQ([<span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]);</div><div class="line">mapSQ([<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>]);</div><div class="line"><span class="comment">// ......</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> mapDB = curry(map, dubble);</div><div class="line">mapDB([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]);</div><div class="line">mapDB([<span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]);</div><div class="line">mapDB([<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>]);</div></pre></td></tr></table></figure></p>
+<p>我们缩小了函数的适用范围，但同时提高函数的适性。  </p>
+<h2 id="将柯里化与函数绑定进行结合"><a href="#将柯里化与函数绑定进行结合" class="headerlink" title="将柯里化与函数绑定进行结合"></a>将柯里化与函数绑定进行结合</h2><p>函数柯里化通常作为函数绑定的一部分包含在其中，构造出更为复杂的bind函数。例如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">bind</span>(<span class="params">fn, context</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> args = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>,<span class="number">2</span>);</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> innerArgs = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</div><div class="line">      <span class="keyword">var</span> finalArgs = args.concat(innerArgs);</div><div class="line">      <span class="keyword">return</span> fn.apply(context,finalArgs);</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>ES6中的bind函数也实现了柯里化，只需要在this值之后传入另一个参数即可。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"btnTest"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"Button"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined">            </span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> handler=&#123;</span></div><div class="line"><span class="javascript">            message:<span class="string">"Event handled."</span>,</span></div><div class="line"><span class="javascript">            handlerFun:<span class="function"><span class="keyword">function</span>(<span class="params">name, event</span>)</span>&#123;</span></div><div class="line"><span class="javascript">                alert(<span class="keyword">this</span>.message + <span class="string">":"</span> + name + <span class="string">":"</span> + event.type);</span></div><div class="line"><span class="undefined">            &#125;</span></div><div class="line"><span class="undefined">        &#125;;     </span></div><div class="line"><span class="javascript">        <span class="built_in">document</span>.getElementById(<span class="string">'btnTest'</span>).onclick=handler.handlerFun.bind(handler, <span class="string">"btnTest"</span>);</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -608,12 +554,12 @@
   <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
-  <p><span>本文标题:</span><a href="/新老AJAX.html">前端面试系列（三）：新老AJAX（XHR1和XHR2）</a></p>
+  <p><span>本文标题:</span><a href="/bind and curry.html">函数绑定和函数柯里化</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Kayson0512 的个人博客">Kayson0512</a></p>
-  <p><span>发布时间:</span>2017年08月09日 - 10:08</p>
-  <p><span>最后更新:</span>2017年08月09日 - 11:08</p>
-  <p><span>原始链接:</span><a href="/新老AJAX.html" title="前端面试系列（三）：新老AJAX（XHR1和XHR2）">http://chenkaixin.cn/新老AJAX.html</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://chenkaixin.cn/新老AJAX.html"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2017年08月10日 - 15:08</p>
+  <p><span>最后更新:</span>2017年08月11日 - 10:08</p>
+  <p><span>原始链接:</span><a href="/bind and curry.html" title="函数绑定和函数柯里化">http://chenkaixin.cn/bind and curry.html</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://chenkaixin.cn/bind and curry.html"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
 </div>
@@ -682,11 +628,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/计算机网络基础/" rel="tag"><i class="fa fa-tag"></i> 计算机网络基础</a>
+            <a href="/tags/函数绑定/" rel="tag"><i class="fa fa-tag"></i> 函数绑定</a>
           
-            <a href="/tags/AJAX/" rel="tag"><i class="fa fa-tag"></i> AJAX</a>
-          
-            <a href="/tags/XHR/" rel="tag"><i class="fa fa-tag"></i> XHR</a>
+            <a href="/tags/函数柯里化/" rel="tag"><i class="fa fa-tag"></i> 函数柯里化</a>
           
         </div>
       
@@ -699,8 +643,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/HTML5新特性.html" rel="next" title="前端面试系列（二）：面试常问的几个HTML5特性">
-                <i class="fa fa-chevron-left"></i> 前端面试系列（二）：面试常问的几个HTML5特性
+              <a href="/cross-domain in browser.html" rel="next" title="前端面试系列（四）：浏览器跨域访问的实现">
+                <i class="fa fa-chevron-left"></i> 前端面试系列（四）：浏览器跨域访问的实现
               </a>
             
           </div>
@@ -709,8 +653,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/浏览器跨域访问的实现.html" rel="prev" title="前端面试系列（四）：浏览器跨域访问的实现">
-                前端面试系列（四）：浏览器跨域访问的实现 <i class="fa fa-chevron-right"></i>
+              <a href="/css relative and absolute.html" rel="prev" title="绝对定位和相对定位">
+                绝对定位和相对定位 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -925,7 +869,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#老AJAX工作原理"><span class="nav-number">1.</span> <span class="nav-text">老AJAX工作原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例"><span class="nav-number">2.</span> <span class="nav-text">实例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#知识拓展"><span class="nav-number">2.1.</span> <span class="nav-text">知识拓展</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#老版本的缺点"><span class="nav-number">3.</span> <span class="nav-text">老版本的缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新版本的功能"><span class="nav-number">4.</span> <span class="nav-text">新版本的功能</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#HTTP请求的时限"><span class="nav-number">4.1.</span> <span class="nav-text">HTTP请求的时限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#FormData对象"><span class="nav-number">4.2.</span> <span class="nav-text">FormData对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#上传文件"><span class="nav-number">4.3.</span> <span class="nav-text">上传文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#接收二进制数据（responseType属性）"><span class="nav-number">4.4.</span> <span class="nav-text">接收二进制数据（responseType属性）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进度信息"><span class="nav-number">4.5.</span> <span class="nav-text">进度信息</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数绑定"><span class="nav-number">1.</span> <span class="nav-text">函数绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一个简单的函数绑定"><span class="nav-number">1.1.</span> <span class="nav-text">一个简单的函数绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义bind函数"><span class="nav-number">1.2.</span> <span class="nav-text">自定义bind函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数柯里化"><span class="nav-number">2.</span> <span class="nav-text">函数柯里化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#最常见的实现"><span class="nav-number">2.1.</span> <span class="nav-text">最常见的实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最常见的应用"><span class="nav-number">2.2.</span> <span class="nav-text">最常见的应用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将柯里化与函数绑定进行结合"><span class="nav-number">3.</span> <span class="nav-text">将柯里化与函数绑定进行结合</span></a></li></ol></div>
             
 
           </div>
