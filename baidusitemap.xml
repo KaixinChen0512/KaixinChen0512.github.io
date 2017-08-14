@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://chenkaixin.cn/closure.html</loc>
+    <lastmod>2017-08-14T13:54:43.168Z</lastmod>
+    <data>
+        <display>
+        <title>闭包究竟是什么？</title>
+        <pubTime>2017-08-14T13:09:15.000Z</pubTime>
+        
+        <tag>-闭包</tag>
+         
+         
+           
+             
+              <breadCrumb title="-前端面试" url="http://chenkaixin.cn/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://chenkaixin.cn/bind%20and%20curry.html</loc>
     <lastmod>2017-08-11T02:01:27.827Z</lastmod>
     <data>
