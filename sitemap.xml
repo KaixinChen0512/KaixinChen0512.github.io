@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://chenkaixin.cn/closure.html</loc>
+    <loc>http://chenkaixin.cn/security-of-FE.html</loc>
     
-    <lastmod>2017-08-14T13:54:43.168Z</lastmod>
+    <lastmod>2017-08-15T13:18:49.423Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chenkaixin.cn/cross-domain%20in%20browser.html</loc>
+    
+    <lastmod>2017-08-15T12:36:56.705Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chenkaixin.cn/Hello-World.html</loc>
+    
+    <lastmod>2017-08-15T12:35:32.482Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chenkaixin.cn/ajax.html</loc>
+    
+    <lastmod>2017-08-15T12:34:54.956Z</lastmod>
     
   </url>
   
@@ -23,13 +44,6 @@
   </url>
   
   <url>
-    <loc>http://chenkaixin.cn/cross-domain%20in%20browser.html</loc>
-    
-    <lastmod>2017-08-10T03:33:03.771Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://chenkaixin.cn/SEO.html</loc>
     
     <lastmod>2017-08-09T03:11:28.753Z</lastmod>
@@ -44,23 +58,9 @@
   </url>
   
   <url>
-    <loc>http://chenkaixin.cn/ajax.html</loc>
-    
-    <lastmod>2017-08-09T03:08:50.062Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://chenkaixin.cn/react-gallery.html</loc>
     
     <lastmod>2017-08-09T01:49:27.493Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chenkaixin.cn/Hello-World.html</loc>
-    
-    <lastmod>2017-08-09T01:49:27.466Z</lastmod>
     
   </url>
   
