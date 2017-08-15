@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://chenkaixin.cn/security-of-FE.html</loc>
-    <lastmod>2017-08-15T13:18:49.423Z</lastmod>
+    <lastmod>2017-08-15T13:25:25.743Z</lastmod>
     <data>
         <display>
         <title>简单聊聊常见的前端安全问题</title>
@@ -31,9 +31,9 @@
         <title>前端面试系列（四）：浏览器跨域访问的实现</title>
         <pubTime>2017-08-09T13:23:30.000Z</pubTime>
         
-        <tag>ajax</tag>
-         
         <tag>计算机网络基础</tag>
+         
+        <tag>ajax</tag>
          
         <tag>JSONP</tag>
          
@@ -77,11 +77,11 @@
         <title>前端面试系列（三）：新老AJAX（XHR1和XHR2）</title>
         <pubTime>2017-08-09T02:47:50.000Z</pubTime>
         
+        <tag>计算机网络基础</tag>
+         
         <tag>ajax</tag>
          
         <tag>XHR</tag>
-         
-        <tag>计算机网络基础</tag>
          
          
            
@@ -143,9 +143,9 @@
         <title>前端面试系列（一）：网站优化的解决方案</title>
         <pubTime>2017-08-08T09:00:48.000Z</pubTime>
         
-        <tag>计算机网络基础</tag>
-         
         <tag>seo</tag>
+         
+        <tag>计算机网络基础</tag>
          
          
            
