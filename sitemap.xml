@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://chenkaixin.cn/closure.html</loc>
+    
+    <lastmod>2017-08-27T12:49:10.230Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://chenkaixin.cn/security-of-FE.html</loc>
     
-    <lastmod>2017-08-15T13:25:25.743Z</lastmod>
+    <lastmod>2017-08-21T08:32:42.770Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chenkaixin.cn/webpack-config.html</loc>
+    
+    <lastmod>2017-08-19T12:03:07.409Z</lastmod>
     
   </url>
   
@@ -25,7 +39,7 @@
   <url>
     <loc>http://chenkaixin.cn/ajax.html</loc>
     
-    <lastmod>2017-08-15T12:34:54.956Z</lastmod>
+    <lastmod>2017-08-15T12:34:54.957Z</lastmod>
     
   </url>
   
@@ -39,7 +53,7 @@
   <url>
     <loc>http://chenkaixin.cn/css%20relative%20and%20absolute.html</loc>
     
-    <lastmod>2017-08-10T13:32:29.236Z</lastmod>
+    <lastmod>2017-08-10T13:32:29.237Z</lastmod>
     
   </url>
   
@@ -53,14 +67,14 @@
   <url>
     <loc>http://chenkaixin.cn/new%20features%20of%20html5.html</loc>
     
-    <lastmod>2017-08-09T03:11:03.759Z</lastmod>
+    <lastmod>2017-08-09T03:11:03.760Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://chenkaixin.cn/react-gallery.html</loc>
     
-    <lastmod>2017-08-09T01:49:27.493Z</lastmod>
+    <lastmod>2017-08-09T01:49:27.494Z</lastmod>
     
   </url>
   
@@ -81,21 +95,21 @@
   <url>
     <loc>http://chenkaixin.cn/categories/index.html</loc>
     
-    <lastmod>2017-08-06T11:53:07.527Z</lastmod>
+    <lastmod>2017-08-06T11:53:07.528Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://chenkaixin.cn/404.html</loc>
     
-    <lastmod>2017-08-06T09:59:17.131Z</lastmod>
+    <lastmod>2017-08-06T09:59:17.132Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://chenkaixin.cn/tags/index.html</loc>
     
-    <lastmod>2017-08-06T09:38:03.011Z</lastmod>
+    <lastmod>2017-08-06T09:38:03.012Z</lastmod>
     
   </url>
   

