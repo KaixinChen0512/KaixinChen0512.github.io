@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://chenkaixin.cn/%E5%90%84%E7%A7%8Dheight.html</loc>
-    <lastmod>2017-09-07T03:16:29.996Z</lastmod>
+    <lastmod>2017-09-07T03:21:08.456Z</lastmod>
     <data>
         <display>
         <title>前端面试要点简述（一）</title>
@@ -66,9 +66,9 @@
         <title>前端面试系列（四）：浏览器跨域访问的实现</title>
         <pubTime>2017-08-09T13:23:30.000Z</pubTime>
         
-        <tag>ajax</tag>
-         
         <tag>计算机网络基础</tag>
+         
+        <tag>ajax</tag>
          
         <tag>JSONP</tag>
          
@@ -112,11 +112,11 @@
         <title>前端面试系列（三）：新老AJAX（XHR1和XHR2）</title>
         <pubTime>2017-08-09T02:47:50.000Z</pubTime>
         
+        <tag>计算机网络基础</tag>
+         
         <tag>ajax</tag>
          
         <tag>XHR</tag>
-         
-        <tag>计算机网络基础</tag>
          
          
            
@@ -178,9 +178,9 @@
         <title>前端面试系列（一）：网站优化的解决方案</title>
         <pubTime>2017-08-08T09:00:48.000Z</pubTime>
         
-        <tag>计算机网络基础</tag>
-         
         <tag>seo</tag>
+         
+        <tag>计算机网络基础</tag>
          
          
            
