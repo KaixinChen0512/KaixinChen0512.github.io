@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://chenkaixin.cn/security-of-FE.html</loc>
+    <lastmod>2017-09-22T03:29:48.764Z</lastmod>
+    <data>
+        <display>
+        <title>简单聊聊常见的前端安全问题</title>
+        <pubTime>2017-08-15T12:27:23.000Z</pubTime>
+        
+        <tag>前端安全</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端面试" url="http://chenkaixin.cn/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://chenkaixin.cn/new%20features%20of%20html5.html</loc>
-    <lastmod>2017-09-08T03:57:18.819Z</lastmod>
+    <lastmod>2017-09-08T07:50:22.705Z</lastmod>
     <data>
         <display>
         <title>前端面试系列（二）：面试常问的几个HTML5特性</title>
@@ -41,26 +61,6 @@
 
     
   <url>
-    <loc>http://chenkaixin.cn/security-of-FE.html</loc>
-    <lastmod>2017-09-02T02:32:35.625Z</lastmod>
-    <data>
-        <display>
-        <title>简单聊聊常见的前端安全问题</title>
-        <pubTime>2017-08-15T12:27:23.000Z</pubTime>
-        
-        <tag>前端安全</tag>
-         
-         
-           
-             
-              <breadCrumb title="前端面试" url="http://chenkaixin.cn/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://chenkaixin.cn/closure.html</loc>
     <lastmod>2017-08-27T12:49:10.230Z</lastmod>
     <data>
@@ -88,9 +88,9 @@
         <title>前端面试系列（四）：浏览器跨域访问的实现</title>
         <pubTime>2017-08-09T13:23:30.000Z</pubTime>
         
-        <tag>计算机网络基础</tag>
-         
         <tag>ajax</tag>
+         
+        <tag>计算机网络基础</tag>
          
         <tag>JSONP</tag>
          
@@ -134,11 +134,11 @@
         <title>前端面试系列（三）：新老AJAX（XHR1和XHR2）</title>
         <pubTime>2017-08-09T02:47:50.000Z</pubTime>
         
-        <tag>计算机网络基础</tag>
-         
         <tag>ajax</tag>
          
         <tag>XHR</tag>
+         
+        <tag>计算机网络基础</tag>
          
          
            
@@ -200,9 +200,9 @@
         <title>前端面试系列（一）：网站优化的解决方案</title>
         <pubTime>2017-08-08T09:00:48.000Z</pubTime>
         
-        <tag>seo</tag>
-         
         <tag>计算机网络基础</tag>
+         
+        <tag>seo</tag>
          
          
            
